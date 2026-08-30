@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { FamilyLookupForm } from "@/components/family/FamilyLookupForm";
 import { FamilyEnrollForm } from "@/components/family/FamilyEnrollForm";
-import { FamilyMap } from "@/components/family/FamilyMap";
 import { RequireFamilySession } from "@/components/family/RequireFamilySession";
 import { FamilySidebar } from "@/components/nav/FamilySidebar";
 import { PageContainer } from "@/components/nav/PageContainer";
@@ -22,7 +21,6 @@ export default function ConsultaPage() {
           <PageContainer className="px-4 py-6 sm:px-6">
             {tab === "consultar" ? (
               <div className="flex flex-col gap-6 pb-6">
-                <FamilyMap />
                 <FamilyLookupForm />
               </div>
             ) : (

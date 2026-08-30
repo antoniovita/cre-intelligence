@@ -8,6 +8,9 @@ export interface FamilyOffer {
   vaga_id: string;
   unidade: string;
   bairro: string | null;
+  endereco: string | null;
+  latitude: number | null;
+  longitude: number | null;
   status: VacancyQueueItem["status"];
   prazo: string;
   crianca_id: string;
@@ -52,6 +55,9 @@ export function useFamilyLookup(criancaId: string | null): FamilyLookupResult {
         vaga_id: match.vaga_id,
         unidade: match.unidade,
         bairro: typeof bairro === "string" ? bairro : null,
+        endereco: match.unidade_endereco,
+        latitude: match.unidade_latitude,
+        longitude: match.unidade_longitude,
         status: match.status,
         prazo: match.prazo,
         crianca_id: match.proxima_da_fila.crianca_id,

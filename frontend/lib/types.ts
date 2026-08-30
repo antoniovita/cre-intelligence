@@ -23,6 +23,10 @@ export interface NextInQueue {
 export interface VacancyQueueItem {
   vaga_id: string;
   unidade: string;
+  /** Coordenadas reais da unidade; null quando a fonte não tem geocodificação. */
+  unidade_latitude: number | null;
+  unidade_longitude: number | null;
+  unidade_endereco: string | null;
   crianca_atual: string;
   status: VacancyStatus;
   prazo: string; // ISO timestamp

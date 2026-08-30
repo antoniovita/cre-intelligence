@@ -2,6 +2,9 @@
   {
     "vaga_id": "V716609-000",
     "unidade": "CM RIO NOVO - RIO DAS FLORES",
+    "unidade_latitude": -22.972272,
+    "unidade_longitude": -43.334928,
+    "unidade_endereco": "ESTRADA DE JACAREPAGUÁ, 5091 — RIO DAS PEDRAS",
     "crianca_atual": "aluno_1419610",
     "status": "aguardando_confirmacao",
     "prazo": "2026-09-01T00:00:00+00:00",
@@ -17,6 +20,9 @@
   {
     "vaga_id": "V716812-001",
     "unidade": "EDI ESCRITORA CLARICE LISPECTOR",
+    "unidade_latitude": -22.976261,
+    "unidade_longitude": -43.325334,
+    "unidade_endereco": "AVENIDA SÃO JOSEMARIA ESCRIVA, 625 — ITANHANGÁ",
     "crianca_atual": "aluno_5108603",
     "status": "confirmada",
     "prazo": "2026-09-04T00:00:00+00:00",
@@ -32,6 +38,9 @@
   {
     "vaga_id": "V716601-002",
     "unidade": "CM OTÁVIO HENRIQUE DE OLIVEIRA",
+    "unidade_latitude": -22.974934,
+    "unidade_longitude": -43.331015,
+    "unidade_endereco": "RUA VELHA, SN — RIO DAS PEDRAS",
     "crianca_atual": "aluno_3341057",
     "status": "vencendo",
     "prazo": "2026-09-03T00:00:00+00:00",
@@ -47,6 +56,9 @@
   {
     "vaga_id": "V716814-003",
     "unidade": "EDI PROFESSORA EMILIA MARIA VIEIRA DE OLIVEIRA",
+    "unidade_latitude": -22.974188,
+    "unidade_longitude": -43.331099,
+    "unidade_endereco": "RUA VELHA, SN — RIO DAS PEDRAS",
     "crianca_atual": "aluno_2458591",
     "status": "aguardando_confirmacao",
     "prazo": "2026-09-01T00:00:00+00:00",
@@ -62,6 +74,9 @@
   {
     "vaga_id": "V7013-004",
     "unidade": "CP ESPAÇO DE EDUCAÇÃO INFANTIL CIDADE DE DEUS",
+    "unidade_latitude": -22.95235,
+    "unidade_longitude": -43.36266,
+    "unidade_endereco": "AV CIDADE DE DEUS, S/N — CIDADE DE DEUS",
     "crianca_atual": "aluno_8078673",
     "status": "confirmada",
     "prazo": "2026-09-09T00:00:00+00:00",
@@ -77,6 +92,9 @@
   {
     "vaga_id": "V734802-005",
     "unidade": "EDI SENHORA PERCILIANA PEREIRA DE ALVARENGA",
+    "unidade_latitude": -22.94965,
+    "unidade_longitude": -43.356636,
+    "unidade_endereco": "RUA MOISÉS, S/N — CIDADE DE DEUS",
     "crianca_atual": "aluno_1499914",
     "status": "vencendo",
     "prazo": "2026-08-31T00:00:00+00:00",
@@ -92,6 +110,9 @@
   {
     "vaga_id": "V716613-006",
     "unidade": "CM MARIA DA CONCEIÇÃO SILVEIRA DE CARVALHO",
+    "unidade_latitude": -22.968566,
+    "unidade_longitude": -43.389478,
+    "unidade_endereco": "RUA FRANZ WEISSMANN, 100 — CURICICA",
     "crianca_atual": "aluno_4668136",
     "status": "aguardando_confirmacao",
     "prazo": "2026-09-01T00:00:00+00:00",
@@ -107,6 +128,9 @@
   {
     "vaga_id": "V716603-007",
     "unidade": "CM CRIANÇA DO FUTURO",
+    "unidade_latitude": -22.944254,
+    "unidade_longitude": -43.384456,
+    "unidade_endereco": "RUA IPERO, S/N — CURICICA",
     "crianca_atual": "aluno_9478454",
     "status": "confirmada",
     "prazo": "2026-09-03T00:00:00+00:00",
@@ -122,6 +146,9 @@
   {
     "vaga_id": "V716805-008",
     "unidade": "EDI ANNA MARIA NIEMEYER",
+    "unidade_latitude": -22.977493,
+    "unidade_longitude": -43.332264,
+    "unidade_endereco": "AVENIDA ENGENHEIRO SOUZA FILHO, S/N — RIO DAS PEDRAS",
     "crianca_atual": "aluno_1445199",
     "status": "vencendo",
     "prazo": "2026-09-09T00:00:00+00:00",
@@ -137,6 +164,9 @@
   {
     "vaga_id": "V7014-009",
     "unidade": "CP CENTRO INTEGRADO SÃO JOSÉ",
+    "unidade_latitude": -22.94726,
+    "unidade_longitude": -43.36008,
+    "unidade_endereco": "R. EDGARD WERNECK, 1615 — CIDADE DE DEUS",
     "crianca_atual": "aluno_4335942",
     "status": "aguardando_confirmacao",
     "prazo": "2026-09-08T00:00:00+00:00",
@@ -152,6 +182,9 @@
   {
     "vaga_id": "V716606-010",
     "unidade": "CM AMIGUINHOS DA VILA SAPÊ",
+    "unidade_latitude": -22.947959,
+    "unidade_longitude": -43.374412,
+    "unidade_endereco": "RUA ITAMAR, 9 — VILA SAPÊ",
     "crianca_atual": "aluno_8038374",
     "status": "confirmada",
     "prazo": "2026-09-08T00:00:00+00:00",
@@ -167,6 +200,9 @@
   {
     "vaga_id": "V716614-011",
     "unidade": "CM AUGUSTO DE CARVALHO TORRES FILHO",
+    "unidade_latitude": -22.955267,
+    "unidade_longitude": -43.390377,
+    "unidade_endereco": "RUA REVERÊNCIA, S/N° — CURICICA",
     "crianca_atual": "aluno_8536477",
     "status": "vencendo",
     "prazo": "2026-09-03T00:00:00+00:00",
@@ -182,6 +218,9 @@
   {
     "vaga_id": "V7040-012",
     "unidade": "CP CRECHE VALE DO SOL PRAÇA SECA",
+    "unidade_latitude": -22.89823,
+    "unidade_longitude": -43.35344,
+    "unidade_endereco": "RUA BARÃO, 1049 — PRAÇA SECA",
     "crianca_atual": "aluno_5667265",
     "status": "aguardando_confirmacao",
     "prazo": "2026-09-09T00:00:00+00:00",
@@ -197,6 +236,9 @@
   {
     "vaga_id": "V716820-013",
     "unidade": "EDI MEDALHISTA OLÍMPICA ÁGATHA BEDNARCZUK RIPPEL",
+    "unidade_latitude": -22.954432,
+    "unidade_longitude": -43.382779,
+    "unidade_endereco": "RUA JOÃO BRUNO LOBO, 356 — CURICICA",
     "crianca_atual": "aluno_3678638",
     "status": "confirmada",
     "prazo": "2026-08-31T00:00:00+00:00",
@@ -212,6 +254,9 @@
   {
     "vaga_id": "V7042-014",
     "unidade": "CP INSTITUTO EDUCACIONAL DIVA ALVES II",
+    "unidade_latitude": -22.95334,
+    "unidade_longitude": -43.37915,
+    "unidade_endereco": "RUA SAMPAIO CORREA, 24 — TAQUARA",
     "crianca_atual": "aluno_6708456",
     "status": "vencendo",
     "prazo": "2026-09-06T00:00:00+00:00",
@@ -227,6 +272,9 @@
   {
     "vaga_id": "V7003-015",
     "unidade": "CP CRECHE ESCOLA MÃE ASTÉRIA",
+    "unidade_latitude": -22.91192,
+    "unidade_longitude": -43.4059,
+    "unidade_endereco": "ESTRADA DA BOIÚNA, 1367 — BOIÚNA/TAQUARA",
     "crianca_atual": "aluno_3608513",
     "status": "aguardando_confirmacao",
     "prazo": "2026-09-04T00:00:00+00:00",
@@ -242,6 +290,9 @@
   {
     "vaga_id": "V430603-016",
     "unidade": "CM TIO MÁRIO",
+    "unidade_latitude": -22.873426,
+    "unidade_longitude": -43.239545,
+    "unidade_endereco": "AVENIDA CANAL 2 - LADO DIREITO, S/N — MARÉ",
     "crianca_atual": "aluno_6647119",
     "status": "confirmada",
     "prazo": "2026-09-03T00:00:00+00:00",
@@ -257,6 +308,9 @@
   {
     "vaga_id": "V716807-017",
     "unidade": "EDI LEILA DINIZ",
+    "unidade_latitude": -22.954868,
+    "unidade_longitude": -43.392306,
+    "unidade_endereco": "ESTRADA DE CURICICA, 200 — CURICICA",
     "crianca_atual": "aluno_2556017",
     "status": "vencendo",
     "prazo": "2026-09-01T00:00:00+00:00",
@@ -272,6 +326,9 @@
   {
     "vaga_id": "V716605-018",
     "unidade": "CM SEMPRE VIDA NISE DA SILVEIRA",
+    "unidade_latitude": -22.943136,
+    "unidade_longitude": -43.352063,
+    "unidade_endereco": "RUA QUINTANILHA, 820 — CIDADE DE DEUS",
     "crianca_atual": "aluno_2622631",
     "status": "aguardando_confirmacao",
     "prazo": "2026-09-06T00:00:00+00:00",
@@ -287,6 +344,9 @@
   {
     "vaga_id": "V716818-019",
     "unidade": "EDI PROFESSORA CLÁUDIA PIRES CONTINO DA SILVA",
+    "unidade_latitude": -22.95761,
+    "unidade_longitude": -43.35047,
+    "unidade_endereco": "AVENIDA TENENTE CORONEL MUNIZ DE ARAGÃO, 1202 — GARDÊNIA AZUL",
     "crianca_atual": "aluno_6770619",
     "status": "confirmada",
     "prazo": "2026-09-05T00:00:00+00:00",
