@@ -4,9 +4,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const NAV_ITEMS = [
-  { href: "/", label: "Visão Geral", short: "Geral" },
-  { href: "/territorios", label: "Territórios", short: "Territórios" },
-  { href: "/fila", label: "Fila de Vagas", short: "Fila" },
+  { href: "/admin", label: "Visão Geral", short: "Geral" },
+  { href: "/admin/territorios", label: "Territórios", short: "Territórios" },
+  { href: "/admin/fila", label: "Fila de Vagas", short: "Fila" },
 ] as const;
 
 export function Navbar() {
@@ -16,7 +16,7 @@ export function Navbar() {
     <div className="shrink-0 px-3 pt-3 sm:px-4 sm:pt-4">
       <nav className="mx-auto flex max-w-7xl items-center gap-1 overflow-x-auto rounded-full bg-blue-600 px-2 py-2 text-white shadow-sm">
         <Link
-          href="/"
+          href="/admin"
           className="shrink-0 px-2.5 py-1.5 text-sm font-bold tracking-tight sm:px-3"
         >
           <span className="hidden sm:inline">CRE Intelligence</span>
@@ -26,8 +26,8 @@ export function Navbar() {
         <ul className="flex shrink-0 items-center gap-1">
           {NAV_ITEMS.map((item) => {
             const active =
-              item.href === "/"
-                ? pathname === "/"
+              item.href === "/admin"
+                ? pathname === "/admin"
                 : pathname.startsWith(item.href);
 
             return (
