@@ -208,7 +208,14 @@ export function PressureMapCanvas({
           100% { box-shadow: 0 0 0 0 rgba(37,99,235,0); }
         }
       `}</style>
-      <div ref={containerRef} className="absolute inset-0" />
+      {/* inline style is required: maplibre-gl.css sets .maplibregl-map { position: relative },
+          same specificity as the `absolute` utility class, and wins the cascade by import
+          order — collapsing this container to a few px tall. Inline style always wins. */}
+      <div
+        ref={containerRef}
+        className="absolute inset-0"
+        style={{ position: "absolute", inset: 0 }}
+      />
     </>
   );
 }
