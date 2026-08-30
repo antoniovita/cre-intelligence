@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import type { Territory } from "@/lib/types";
 import { pressureColor } from "@/lib/pressureColor";
 
@@ -9,6 +10,21 @@ interface TerritoryDetailProps {
 }
 
 export default function TerritoryDetail({ territory, onClose }: TerritoryDetailProps) {
+  const [pulse, setPulse] = useState(false);
+  const prevPressureRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    if (!territory) return;
+    const changed =
+      prevPressureRef.current !== null && prevPressureRef.current !== territory.pressure;
+    prevPressureRef.current = territory.pressure;
+    if (!changed) return;
+
+    setPulse(true);
+    const timeout = setTimeout(() => setPulse(false), 400);
+    return () => clearTimeout(timeout);
+  }, [territory]);
+
   if (!territory) return null;
 
   return (
@@ -42,7 +58,9 @@ export default function TerritoryDetail({ territory, onClose }: TerritoryDetailP
         <div className="flex items-center justify-between">
           <dt className="text-zinc-500 dark:text-zinc-400">Pressure</dt>
           <dd
-            className="rounded px-2 py-0.5 font-semibold text-white transition-colors duration-300"
+            className={`rounded px-2 py-0.5 font-semibold text-white transition-all duration-300 ${
+              pulse ? "scale-125" : "scale-100"
+            }`}
             style={{ backgroundColor: pressureColor(territory.pressure) }}
           >
             {territory.pressure.toFixed(2)}
