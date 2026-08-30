@@ -11,6 +11,11 @@ export interface RegionSummary {
 
 const CRE_PATTERN = /CRE (\d+)/;
 
+/** Extracts the CRE number from a territory name (e.g. "Microárea 7.28 (CRE 7)" -> "7"). */
+export function extractCre(name: string): string {
+  return name.match(CRE_PATTERN)?.[1] ?? "?";
+}
+
 /**
  * Groups territories by CRE (extracted from `name`, e.g. "Microárea 7.28 (CRE 7)")
  * and aggregates demand/supply, recomputing pressure from the aggregated totals
@@ -21,8 +26,7 @@ export function aggregateByRegion(territories: Territory[]): RegionSummary[] {
   const groups = new Map<string, Territory[]>();
 
   for (const territory of territories) {
-    const match = territory.name.match(CRE_PATTERN);
-    const cre = match ? match[1] : "?";
+    const cre = extractCre(territory.name);
     const list = groups.get(cre) ?? [];
     list.push(territory);
     groups.set(cre, list);
