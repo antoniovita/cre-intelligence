@@ -1,13 +1,7 @@
 "use client";
 
 import type { Territory } from "@/lib/types";
-
-function pressureColor(pressure: number): string {
-  if (pressure < 1) return "#22c55e";
-  if (pressure < 2) return "#eab308";
-  if (pressure < 3) return "#f97316";
-  return "#ef4444";
-}
+import { pressureColor } from "@/lib/pressureColor";
 
 interface TerritoryDetailProps {
   territory: Territory | null;
@@ -41,12 +35,14 @@ export default function TerritoryDetail({ territory, onClose }: TerritoryDetailP
         </div>
         <div className="flex items-center justify-between">
           <dt className="text-zinc-500 dark:text-zinc-400">Oferta</dt>
-          <dd className="font-medium text-black dark:text-zinc-50">{territory.supply}</dd>
+          <dd className="font-medium text-black dark:text-zinc-50 transition-all duration-300">
+            {territory.supply}
+          </dd>
         </div>
         <div className="flex items-center justify-between">
           <dt className="text-zinc-500 dark:text-zinc-400">Pressure</dt>
           <dd
-            className="rounded px-2 py-0.5 font-semibold text-white"
+            className="rounded px-2 py-0.5 font-semibold text-white transition-colors duration-300"
             style={{ backgroundColor: pressureColor(territory.pressure) }}
           >
             {territory.pressure.toFixed(2)}
