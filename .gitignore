@@ -1,4 +1,27 @@
+# Dataset original (repositório externo separado — ver data/README.md)
 dadoscreche
+
+# Python
 __pycache__/
 *.pyc
+*.pyo
+.venv/
+venv/
+.pytest_cache/
+
+# Node
 node_modules/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Ambiente
+.env
+.env.*
+!.env.example

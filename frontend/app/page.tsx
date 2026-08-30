@@ -15,7 +15,7 @@ export default function LandingPage() {
             Painel de gestão
           </Link>
           <Link
-            href="/consulta"
+            href="/login?tipo=familia"
             className="rounded-full bg-blue-600 px-3.5 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-700 sm:px-4"
           >
             Consultar inscrição
@@ -110,7 +110,7 @@ export default function LandingPage() {
               </Link>
 
               <Link
-                href="/consulta"
+                href="/login?tipo=familia"
                 className="group flex flex-col gap-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-lg sm:p-8"
               >
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-blue-700">

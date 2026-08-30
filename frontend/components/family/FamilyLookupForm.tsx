@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { useFamilyLookup, type FamilyOffer } from "@/lib/useFamilyLookup";
 import { useCountdown } from "@/components/vacancy/useCountdown";
+import { useFamilySession } from "@/lib/useFamilySession";
 
 type Decision = "confirmed" | "declined" | null;
 
@@ -12,6 +14,7 @@ export function FamilyLookupForm() {
   const [decision, setDecision] = useState<Decision>(null);
 
   const result = useFamilyLookup(submitted);
+  const { session } = useFamilySession();
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -79,6 +82,7 @@ export function FamilyLookupForm() {
         <FamilyOfferCard
           offer={result.offer}
           decision={decision}
+          canAct={session !== null}
           onConfirm={() => setDecision("confirmed")}
           onDecline={() => setDecision("declined")}
         />
@@ -96,11 +100,14 @@ const STATUS_LABEL: Record<FamilyOffer["status"], string> = {
 function FamilyOfferCard({
   offer,
   decision,
+  canAct,
   onConfirm,
   onDecline,
 }: {
   offer: FamilyOffer;
   decision: Decision;
+  /** Whether there's a logged-in family session. */
+  canAct: boolean;
   onConfirm: () => void;
   onDecline: () => void;
 }) {
@@ -169,7 +176,7 @@ function FamilyOfferCard({
           </div>
         </dl>
 
-        {decision === null && (
+        {decision === null && canAct && (
           <div className="mt-5 flex flex-col gap-2 sm:flex-row">
             <button
               onClick={onConfirm}
@@ -184,6 +191,22 @@ function FamilyOfferCard({
             >
               Recusar vaga
             </button>
+          </div>
+        )}
+
+        {decision === null && !canAct && (
+          <div className="mt-5 flex items-start gap-3 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3">
+            <InfoIcon className="mt-0.5 shrink-0 text-amber-500" />
+            <p className="text-sm text-amber-800">
+              Para confirmar ou recusar esta vaga, entre com a conta da
+              família dona desta inscrição.{" "}
+              <Link
+                href="/login?tipo=familia"
+                className="font-semibold underline underline-offset-2 hover:text-amber-900"
+              >
+                Fazer login da família
+              </Link>
+            </p>
           </div>
         )}
 
