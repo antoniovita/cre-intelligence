@@ -1,12 +1,13 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import * as maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import type { Territory } from "@/lib/types";
+import { useJsonData } from "@/lib/useJsonData";
 
 const RIO_CENTER: [number, number] = [-43.35, -22.92];
-const DATA_URL = "/data/territories.mock.json";
+const DATA_URL = "/data/territories.json";
 
 // baixa pressão -> alta pressão
 function pressureColor(pressure: number): string {
@@ -24,21 +25,25 @@ export default function TerritoryMap({ onSelectTerritory }: TerritoryMapProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
   const markersRef = useRef<maplibregl.Marker[]>([]);
-  const [territories, setTerritories] = useState<Territory[]>([]);
-
-  useEffect(() => {
-    fetch(DATA_URL)
-      .then((res) => res.json())
-      .then((data: Territory[]) => setTerritories(data))
-      .catch((err) => console.error("Falha ao carregar territories:", err));
-  }, []);
+  const { data: territories } = useJsonData<Territory[]>(DATA_URL);
 
   useEffect(() => {
     if (!containerRef.current || mapRef.current) return;
 
     mapRef.current = new maplibregl.Map({
       container: containerRef.current,
-      style: "https://demotiles.maplibre.org/style.json",
+      style: {
+        version: 8,
+        sources: {
+          osm: {
+            type: "raster",
+            tiles: ["https://tile.openstreetmap.org/{z}/{x}/{y}.png"],
+            tileSize: 256,
+            attribution: "&copy; OpenStreetMap contributors",
+          },
+        },
+        layers: [{ id: "osm", type: "raster", source: "osm" }],
+      },
       center: RIO_CENTER,
       zoom: 9.5,
     });
@@ -52,7 +57,7 @@ export default function TerritoryMap({ onSelectTerritory }: TerritoryMapProps) {
 
   useEffect(() => {
     const map = mapRef.current;
-    if (!map || territories.length === 0) return;
+    if (!map || !territories || territories.length === 0) return;
 
     markersRef.current.forEach((marker) => marker.remove());
     markersRef.current = [];
