@@ -1,7 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { Brand } from "./Brand";
+import { useFamilySession } from "@/lib/useFamilySession";
 
 interface FamilySidebarItem {
   id: string;
@@ -42,6 +44,14 @@ function NavIcon({ path }: { path: string }) {
  * visual language, but drives tab state instead of routing.
  */
 export function FamilySidebar({ active, onSelect }: FamilySidebarProps) {
+  const { logout } = useFamilySession();
+  const router = useRouter();
+
+  function handleLogout() {
+    logout();
+    router.push("/");
+  }
+
   return (
     <aside className="flex w-16 shrink-0 flex-col border-r border-slate-200 bg-white py-4 lg:w-60">
       <div className="mb-2 hidden flex-col gap-0.5 px-4 lg:flex">
@@ -82,6 +92,19 @@ export function FamilySidebar({ active, onSelect }: FamilySidebarProps) {
       </nav>
 
       <div className="mt-auto flex flex-col gap-2 border-t border-slate-100 px-4 pt-3">
+        <button
+          onClick={handleLogout}
+          className="hidden text-left text-xs font-medium text-slate-400 hover:text-slate-600 lg:inline"
+        >
+          Sair
+        </button>
+        <button
+          onClick={handleLogout}
+          aria-label="Sair"
+          className="flex justify-center text-slate-400 hover:text-slate-600 lg:hidden"
+        >
+          ⏻
+        </button>
         <Link
           href="/"
           className="hidden text-xs font-medium text-slate-400 hover:text-slate-600 lg:inline"
