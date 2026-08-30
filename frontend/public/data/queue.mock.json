@@ -1,0 +1,314 @@
+[
+  {
+    "vaga_id": "10291",
+    "unidade": "EDI Vila Kennedy",
+    "crianca_atual": "#29381",
+    "status": "vencendo",
+    "prazo": "2026-08-30T13:00:00-03:00",
+    "proxima_da_fila": {
+      "crianca_id": "#38491",
+      "elegibilidade": "ok",
+      "prioridade_score": 91,
+      "resposta_socioeconomica_resumo": {
+        "deficiencia": true,
+        "cadunico": true,
+        "bolsa_familia_ou_cartao_carioca": true,
+        "violencia_domestica": true,
+        "uso_abusivo_drogas_alcool": true,
+        "refugiado": false,
+        "doenca_cronica_grave": true,
+        "presidiario_ex_presidiario": false,
+        "responsavel_deficiente": false,
+        "familia_monoparental": true,
+        "fila_espera_ano_anterior": true,
+        "ano_regua": 2024
+      }
+    }
+  },
+  {
+    "vaga_id": "10344",
+    "unidade": "CM Ladeira dos Funcionários",
+    "crianca_atual": "#41027",
+    "status": "aguardando_confirmacao",
+    "prazo": "2026-08-31T13:00:00-03:00",
+    "proxima_da_fila": {
+      "crianca_id": "#40118",
+      "elegibilidade": "ok",
+      "prioridade_score": 52,
+      "resposta_socioeconomica_resumo": {
+        "deficiencia": false,
+        "cadunico": true,
+        "bolsa_familia_ou_cartao_carioca": true,
+        "violencia_domestica": true,
+        "uso_abusivo_drogas_alcool": false,
+        "refugiado": false,
+        "doenca_cronica_grave": false,
+        "presidiario_ex_presidiario": false,
+        "responsavel_deficiente": false,
+        "familia_monoparental": true,
+        "fila_espera_ano_anterior": false,
+        "ano_regua": 2024
+      }
+    }
+  },
+  {
+    "vaga_id": "10358",
+    "unidade": "Creche Parceira Nossa Senhora de Fátima",
+    "crianca_atual": "#33712",
+    "status": "vencendo",
+    "prazo": "2026-08-29T16:00:00-03:00",
+    "proxima_da_fila": {
+      "crianca_id": "#39620",
+      "elegibilidade": "ok",
+      "prioridade_score": 83,
+      "resposta_socioeconomica_resumo": {
+        "deficiencia": true,
+        "cadunico": true,
+        "bolsa_familia_ou_cartao_carioca": true,
+        "violencia_domestica": false,
+        "uso_abusivo_drogas_alcool": true,
+        "refugiado": false,
+        "doenca_cronica_grave": true,
+        "presidiario_ex_presidiario": true,
+        "responsavel_deficiente": false,
+        "familia_monoparental": true,
+        "fila_espera_ano_anterior": true,
+        "ano_regua": 2024
+      }
+    }
+  },
+  {
+    "vaga_id": "10402",
+    "unidade": "CM Doutor Mário Olinto",
+    "crianca_atual": "#27965",
+    "status": "vencendo",
+    "prazo": "2026-08-30T17:00:00-03:00",
+    "proxima_da_fila": {
+      "crianca_id": "#42883",
+      "elegibilidade": "pendente_documentacao",
+      "prioridade_score": 70,
+      "resposta_socioeconomica_resumo": {
+        "deficiencia": false,
+        "cadunico": true,
+        "bolsa_familia_ou_cartao_carioca": true,
+        "violencia_domestica": true,
+        "uso_abusivo_drogas_alcool": true,
+        "refugiado": true,
+        "doenca_cronica_grave": true,
+        "presidiario_ex_presidiario": false,
+        "responsavel_deficiente": false,
+        "familia_monoparental": true,
+        "fila_espera_ano_anterior": false,
+        "ano_regua": 2024
+      }
+    }
+  },
+  {
+    "vaga_id": "10417",
+    "unidade": "EDI Nelson Mandela",
+    "crianca_atual": "#35840",
+    "status": "confirmada",
+    "prazo": "2026-08-30T03:00:00-03:00",
+    "proxima_da_fila": {
+      "crianca_id": "#31274",
+      "elegibilidade": "ok",
+      "prioridade_score": 44,
+      "resposta_socioeconomica_resumo": {
+        "deficiencia": false,
+        "cadunico": true,
+        "bolsa_familia_ou_cartao_carioca": true,
+        "violencia_domestica": false,
+        "uso_abusivo_drogas_alcool": false,
+        "refugiado": false,
+        "doenca_cronica_grave": true,
+        "presidiario_ex_presidiario": false,
+        "responsavel_deficiente": false,
+        "familia_monoparental": false,
+        "fila_espera_ano_anterior": true,
+        "ano_regua": 2024
+      }
+    }
+  },
+  {
+    "vaga_id": "10463",
+    "unidade": "Creche Parceira Sagrada Família",
+    "crianca_atual": "#44190",
+    "status": "vencendo",
+    "prazo": "2026-08-31T01:00:00-03:00",
+    "proxima_da_fila": {
+      "crianca_id": "#37556",
+      "elegibilidade": "ok",
+      "prioridade_score": 64,
+      "resposta_socioeconomica_resumo": {
+        "deficiencia": true,
+        "cadunico": true,
+        "bolsa_familia_ou_cartao_carioca": false,
+        "violencia_domestica": true,
+        "uso_abusivo_drogas_alcool": false,
+        "refugiado": false,
+        "doenca_cronica_grave": false,
+        "presidiario_ex_presidiario": false,
+        "responsavel_deficiente": true,
+        "familia_monoparental": true,
+        "fila_espera_ano_anterior": false,
+        "ano_regua": 2024
+      }
+    }
+  },
+  {
+    "vaga_id": "10508",
+    "unidade": "EDI Professora Marlene Souza Lima",
+    "crianca_atual": "#30622",
+    "status": "aguardando_confirmacao",
+    "prazo": "2026-09-01T05:00:00-03:00",
+    "proxima_da_fila": {
+      "crianca_id": "#43301",
+      "elegibilidade": "revisao_manual",
+      "prioridade_score": 51,
+      "resposta_socioeconomica_resumo": {
+        "deficiencia": false,
+        "cadunico": true,
+        "bolsa_familia_ou_cartao_carioca": true,
+        "violencia_domestica": false,
+        "uso_abusivo_drogas_alcool": true,
+        "refugiado": false,
+        "doenca_cronica_grave": false,
+        "presidiario_ex_presidiario": false,
+        "responsavel_deficiente": false,
+        "familia_monoparental": false,
+        "fila_espera_ano_anterior": true,
+        "ano_regua": 2024
+      }
+    }
+  },
+  {
+    "vaga_id": "10551",
+    "unidade": "CM Zilda Arns",
+    "crianca_atual": "#28437",
+    "status": "vencendo",
+    "prazo": "2026-08-29T01:00:00-03:00",
+    "proxima_da_fila": {
+      "crianca_id": "#36089",
+      "elegibilidade": "ok",
+      "prioridade_score": 100,
+      "resposta_socioeconomica_resumo": {
+        "deficiencia": true,
+        "cadunico": true,
+        "bolsa_familia_ou_cartao_carioca": true,
+        "violencia_domestica": true,
+        "uso_abusivo_drogas_alcool": true,
+        "refugiado": true,
+        "doenca_cronica_grave": true,
+        "presidiario_ex_presidiario": true,
+        "responsavel_deficiente": true,
+        "familia_monoparental": true,
+        "fila_espera_ano_anterior": true,
+        "ano_regua": 2024
+      }
+    }
+  },
+  {
+    "vaga_id": "10594",
+    "unidade": "Creche Parceira São Judas Tadeu",
+    "crianca_atual": "#39118",
+    "status": "vencendo",
+    "prazo": "2026-08-31T07:00:00-03:00",
+    "proxima_da_fila": {
+      "crianca_id": "#34762",
+      "elegibilidade": "ok",
+      "prioridade_score": 40,
+      "resposta_socioeconomica_resumo": {
+        "deficiencia": false,
+        "cadunico": true,
+        "bolsa_familia_ou_cartao_carioca": false,
+        "violencia_domestica": true,
+        "uso_abusivo_drogas_alcool": false,
+        "refugiado": false,
+        "doenca_cronica_grave": true,
+        "presidiario_ex_presidiario": false,
+        "responsavel_deficiente": false,
+        "familia_monoparental": true,
+        "fila_espera_ano_anterior": false,
+        "ano_regua": 2024
+      }
+    }
+  },
+  {
+    "vaga_id": "10627",
+    "unidade": "EDI Cora Coralina",
+    "crianca_atual": "#32508",
+    "status": "aguardando_confirmacao",
+    "prazo": "2026-09-01T21:00:00-03:00",
+    "proxima_da_fila": {
+      "crianca_id": "#41955",
+      "elegibilidade": "ok",
+      "prioridade_score": 23,
+      "resposta_socioeconomica_resumo": {
+        "deficiencia": false,
+        "cadunico": false,
+        "bolsa_familia_ou_cartao_carioca": true,
+        "violencia_domestica": false,
+        "uso_abusivo_drogas_alcool": false,
+        "refugiado": true,
+        "doenca_cronica_grave": false,
+        "presidiario_ex_presidiario": false,
+        "responsavel_deficiente": false,
+        "familia_monoparental": true,
+        "fila_espera_ano_anterior": true,
+        "ano_regua": 2024
+      }
+    }
+  },
+  {
+    "vaga_id": "10673",
+    "unidade": "CM Tia Ciata",
+    "crianca_atual": "#26714",
+    "status": "vencendo",
+    "prazo": "2026-08-30T06:00:00-03:00",
+    "proxima_da_fila": {
+      "crianca_id": "#38027",
+      "elegibilidade": "pendente_documentacao",
+      "prioridade_score": 52,
+      "resposta_socioeconomica_resumo": {
+        "deficiencia": true,
+        "cadunico": false,
+        "bolsa_familia_ou_cartao_carioca": true,
+        "violencia_domestica": false,
+        "uso_abusivo_drogas_alcool": true,
+        "refugiado": false,
+        "doenca_cronica_grave": false,
+        "presidiario_ex_presidiario": true,
+        "responsavel_deficiente": false,
+        "familia_monoparental": false,
+        "fila_espera_ano_anterior": false,
+        "ano_regua": 2024
+      }
+    }
+  },
+  {
+    "vaga_id": "10718",
+    "unidade": "EDI Ayrton Senna",
+    "crianca_atual": "#45033",
+    "status": "confirmada",
+    "prazo": "2026-08-31T21:00:00-03:00",
+    "proxima_da_fila": {
+      "crianca_id": "#33846",
+      "elegibilidade": "ok",
+      "prioridade_score": 37,
+      "resposta_socioeconomica_resumo": {
+        "deficiencia": false,
+        "cadunico": true,
+        "bolsa_familia_ou_cartao_carioca": false,
+        "violencia_domestica": true,
+        "uso_abusivo_drogas_alcool": false,
+        "refugiado": false,
+        "doenca_cronica_grave": false,
+        "presidiario_ex_presidiario": false,
+        "responsavel_deficiente": true,
+        "familia_monoparental": false,
+        "fila_espera_ano_anterior": false,
+        "ano_regua": 2024
+      }
+    }
+  }
+]
