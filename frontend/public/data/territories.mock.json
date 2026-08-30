@@ -1,0 +1,17 @@
+[
+  { "id": "1.1", "name": "Centro / Território 1.1", "demand": 1200, "supply": 600, "pressure": 2.0, "latitude": -22.9068, "longitude": -43.1729 },
+  { "id": "1.2", "name": "Centro / Território 1.2", "demand": 800, "supply": 700, "pressure": 1.14, "latitude": -22.8995, "longitude": -43.1963 },
+  { "id": "2.4", "name": "Zona Norte / Território 2.4", "demand": 1500, "supply": 500, "pressure": 3.0, "latitude": -22.8674, "longitude": -43.2731 },
+  { "id": "2.9", "name": "Zona Norte / Território 2.9", "demand": 950, "supply": 620, "pressure": 1.53, "latitude": -22.8523, "longitude": -43.3339 },
+  { "id": "3.3", "name": "Tijuca / Território 3.3", "demand": 700, "supply": 690, "pressure": 1.01, "latitude": -22.9257, "longitude": -43.2306 },
+  { "id": "3.7", "name": "Tijuca / Território 3.7", "demand": 1100, "supply": 450, "pressure": 2.44, "latitude": -22.9354, "longitude": -43.2412 },
+  { "id": "4.2", "name": "Zona Sul / Território 4.2", "demand": 600, "supply": 580, "pressure": 1.03, "latitude": -22.9707, "longitude": -43.1823 },
+  { "id": "4.6", "name": "Zona Sul / Território 4.6", "demand": 500, "supply": 520, "pressure": 0.96, "latitude": -22.9838, "longitude": -43.2096 },
+  { "id": "5.1", "name": "Bangu / Território 5.1", "demand": 1800, "supply": 400, "pressure": 4.5, "latitude": -22.8783, "longitude": -43.4649 },
+  { "id": "5.8", "name": "Bangu / Território 5.8", "demand": 1300, "supply": 550, "pressure": 2.36, "latitude": -22.8641, "longitude": -43.4812 },
+  { "id": "6.2", "name": "Campo Grande / Território 6.2", "demand": 1600, "supply": 480, "pressure": 3.33, "latitude": -22.9058, "longitude": -43.5619 },
+  { "id": "6.9", "name": "Campo Grande / Território 6.9", "demand": 900, "supply": 650, "pressure": 1.38, "latitude": -22.8967, "longitude": -43.5983 },
+  { "id": "7.3", "name": "Santa Cruz / Território 7.3", "demand": 1400, "supply": 420, "pressure": 3.33, "latitude": -22.9186, "longitude": -43.6862 },
+  { "id": "8.5", "name": "Ilha do Governador / Território 8.5", "demand": 750, "supply": 630, "pressure": 1.19, "latitude": -22.8107, "longitude": -43.2050 },
+  { "id": "9.1", "name": "Barra da Tijuca / Território 9.1", "demand": 1000, "supply": 900, "pressure": 1.11, "latitude": -23.0002, "longitude": -43.3652 }
+]
