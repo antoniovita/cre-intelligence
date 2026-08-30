@@ -9,15 +9,6 @@
     "longitude": -43.51005584683058
   },
   {
-    "id": "7.28",
-    "name": "Microárea 7.28 (CRE 7)",
-    "demand": 599,
-    "supply": 441,
-    "pressure": 1.36,
-    "latitude": -23.008561340276472,
-    "longitude": -43.517209121421416
-  },
-  {
     "id": "1.1",
     "name": "Microárea 1.1 (CRE 1)",
     "demand": 664,

@@ -121,18 +121,27 @@ def build_territories() -> list[dict]:
     Gera a lista de territórios no schema de territories.json:
     [{ id, name, demand, supply, pressure, latitude, longitude }]
 
-    Território = microárea oficial da SME (cod_territ do shapefile).
-    Só entram territórios com demand > 0 E supply > 0 — sem oferta ou sem
-    procura registrada não tem pressure informativo pra mostrar no mapa.
+    Território = microárea oficial da SME (cod_territ do shapefile). Um
+    cod_territ pode ter mais de um polígono (ex. "7.28" — área descontínua);
+    nesse caso usamos o de maior área pra representar o ponto no mapa, e o
+    território aparece uma única vez no JSON.
     """
     shapes, attrs = loaders.load_microareas()
 
     demand = _demand_por_territorio()
     supply = _supply_por_territorio()
 
-    territories = []
+    # Pra cada cod_territ, guarda o shape de maior área (attrs.st_area_sh).
+    maior_shape_por_territorio: dict[str, tuple[float, object, dict]] = {}
     for shape, (_, attr) in zip(shapes, attrs.iterrows()):
         cod_territ = attr["cod_territ"]
+        area = attr["st_area_sh"]
+        atual = maior_shape_por_territorio.get(cod_territ)
+        if atual is None or area > atual[0]:
+            maior_shape_por_territorio[cod_territ] = (area, shape, attr)
+
+    territories = []
+    for cod_territ, (_, shape, attr) in maior_shape_por_territorio.items():
         d = int(demand.get(cod_territ, 0))
         s = int(supply.get(cod_territ, 0))
 
