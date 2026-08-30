@@ -1,5 +1,7 @@
 # CRE Intelligence
 
+https://youtu.be/zdKN9UN5d_E
+
 Inteligência de vagas para a educação infantil do Rio de Janeiro — mapeia a **pressão de demanda por território** (`pressure = demand / supply`), gerencia a fila de vagas e permite que famílias consultem e respondam a uma vaga oferecida.
 
 Projeto do **Claude Impact Lab 2026**, sobre dados reais (anonimizados) de inscrição em creche da SME-Rio.
