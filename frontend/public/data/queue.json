@@ -1,0 +1,302 @@
+[
+  {
+    "vaga_id": "V716609-000",
+    "unidade": "CM RIO NOVO - RIO DAS FLORES",
+    "crianca_atual": "aluno_1419610",
+    "status": "aguardando_confirmacao",
+    "prazo": "2026-09-01T00:00:00+00:00",
+    "proxima_da_fila": {
+      "crianca_id": "aluno_0056777",
+      "elegibilidade": "ok",
+      "prioridade_score": 55.0,
+      "resposta_socioeconomica_resumo": {
+        "bairro": "RIO DAS PEDRAS"
+      }
+    }
+  },
+  {
+    "vaga_id": "V716812-001",
+    "unidade": "EDI ESCRITORA CLARICE LISPECTOR",
+    "crianca_atual": "aluno_5108603",
+    "status": "confirmada",
+    "prazo": "2026-09-04T00:00:00+00:00",
+    "proxima_da_fila": {
+      "crianca_id": "aluno_0081783",
+      "elegibilidade": "ok",
+      "prioridade_score": 4.0,
+      "resposta_socioeconomica_resumo": {
+        "bairro": "RIO DAS PEDRAS"
+      }
+    }
+  },
+  {
+    "vaga_id": "V716601-002",
+    "unidade": "CM OTÁVIO HENRIQUE DE OLIVEIRA",
+    "crianca_atual": "aluno_3341057",
+    "status": "vencendo",
+    "prazo": "2026-09-03T00:00:00+00:00",
+    "proxima_da_fila": {
+      "crianca_id": "aluno_0020890",
+      "elegibilidade": "ok",
+      "prioridade_score": 2.0,
+      "resposta_socioeconomica_resumo": {
+        "bairro": "ITANHANGÁ"
+      }
+    }
+  },
+  {
+    "vaga_id": "V716814-003",
+    "unidade": "EDI PROFESSORA EMILIA MARIA VIEIRA DE OLIVEIRA",
+    "crianca_atual": "aluno_2458591",
+    "status": "aguardando_confirmacao",
+    "prazo": "2026-09-01T00:00:00+00:00",
+    "proxima_da_fila": {
+      "crianca_id": "aluno_0058934",
+      "elegibilidade": "ok",
+      "prioridade_score": 0.0,
+      "resposta_socioeconomica_resumo": {
+        "bairro": "ANIL"
+      }
+    }
+  },
+  {
+    "vaga_id": "V7013-004",
+    "unidade": "CP ESPAÇO DE EDUCAÇÃO INFANTIL CIDADE DE DEUS",
+    "crianca_atual": "aluno_8078673",
+    "status": "confirmada",
+    "prazo": "2026-09-09T00:00:00+00:00",
+    "proxima_da_fila": {
+      "crianca_id": "aluno_0142874",
+      "elegibilidade": "ok",
+      "prioridade_score": 25.0,
+      "resposta_socioeconomica_resumo": {
+        "bairro": "CIDADE DE DEUS"
+      }
+    }
+  },
+  {
+    "vaga_id": "V734802-005",
+    "unidade": "EDI SENHORA PERCILIANA PEREIRA DE ALVARENGA",
+    "crianca_atual": "aluno_1499914",
+    "status": "vencendo",
+    "prazo": "2026-08-31T00:00:00+00:00",
+    "proxima_da_fila": {
+      "crianca_id": "aluno_0000247",
+      "elegibilidade": "ok",
+      "prioridade_score": 0.0,
+      "resposta_socioeconomica_resumo": {
+        "bairro": "CIDADE DE DEUS"
+      }
+    }
+  },
+  {
+    "vaga_id": "V716613-006",
+    "unidade": "CM MARIA DA CONCEIÇÃO SILVEIRA DE CARVALHO",
+    "crianca_atual": "aluno_4668136",
+    "status": "aguardando_confirmacao",
+    "prazo": "2026-09-01T00:00:00+00:00",
+    "proxima_da_fila": {
+      "crianca_id": "aluno_0092761",
+      "elegibilidade": "ok",
+      "prioridade_score": 2.0,
+      "resposta_socioeconomica_resumo": {
+        "bairro": "CURICICA"
+      }
+    }
+  },
+  {
+    "vaga_id": "V716603-007",
+    "unidade": "CM CRIANÇA DO FUTURO",
+    "crianca_atual": "aluno_9478454",
+    "status": "confirmada",
+    "prazo": "2026-09-03T00:00:00+00:00",
+    "proxima_da_fila": {
+      "crianca_id": "aluno_0010720",
+      "elegibilidade": "ok",
+      "prioridade_score": 53.0,
+      "resposta_socioeconomica_resumo": {
+        "bairro": "TAQUARA"
+      }
+    }
+  },
+  {
+    "vaga_id": "V716805-008",
+    "unidade": "EDI ANNA MARIA NIEMEYER",
+    "crianca_atual": "aluno_1445199",
+    "status": "vencendo",
+    "prazo": "2026-09-09T00:00:00+00:00",
+    "proxima_da_fila": {
+      "crianca_id": "aluno_0060368",
+      "elegibilidade": "ok",
+      "prioridade_score": 0.0,
+      "resposta_socioeconomica_resumo": {
+        "bairro": "ANIL"
+      }
+    }
+  },
+  {
+    "vaga_id": "V7014-009",
+    "unidade": "CP CENTRO INTEGRADO SÃO JOSÉ",
+    "crianca_atual": "aluno_4335942",
+    "status": "aguardando_confirmacao",
+    "prazo": "2026-09-08T00:00:00+00:00",
+    "proxima_da_fila": {
+      "crianca_id": "aluno_0002148",
+      "elegibilidade": "ok",
+      "prioridade_score": 0.0,
+      "resposta_socioeconomica_resumo": {
+        "bairro": "CIDADE DE DEUS"
+      }
+    }
+  },
+  {
+    "vaga_id": "V716606-010",
+    "unidade": "CM AMIGUINHOS DA VILA SAPÊ",
+    "crianca_atual": "aluno_8038374",
+    "status": "confirmada",
+    "prazo": "2026-09-08T00:00:00+00:00",
+    "proxima_da_fila": {
+      "crianca_id": "aluno_0002358",
+      "elegibilidade": "ok",
+      "prioridade_score": 53.0,
+      "resposta_socioeconomica_resumo": {
+        "bairro": "CIDADE DE DEUS"
+      }
+    }
+  },
+  {
+    "vaga_id": "V716614-011",
+    "unidade": "CM AUGUSTO DE CARVALHO TORRES FILHO",
+    "crianca_atual": "aluno_8536477",
+    "status": "vencendo",
+    "prazo": "2026-09-03T00:00:00+00:00",
+    "proxima_da_fila": {
+      "crianca_id": "aluno_0101563",
+      "elegibilidade": "ok",
+      "prioridade_score": 2.0,
+      "resposta_socioeconomica_resumo": {
+        "bairro": "CAMORIM"
+      }
+    }
+  },
+  {
+    "vaga_id": "V7040-012",
+    "unidade": "CP CRECHE VALE DO SOL PRAÇA SECA",
+    "crianca_atual": "aluno_5667265",
+    "status": "aguardando_confirmacao",
+    "prazo": "2026-09-09T00:00:00+00:00",
+    "proxima_da_fila": {
+      "crianca_id": "aluno_0114683",
+      "elegibilidade": "ok",
+      "prioridade_score": 0.0,
+      "resposta_socioeconomica_resumo": {
+        "bairro": "VALQUEIRE"
+      }
+    }
+  },
+  {
+    "vaga_id": "V716820-013",
+    "unidade": "EDI MEDALHISTA OLÍMPICA ÁGATHA BEDNARCZUK RIPPEL",
+    "crianca_atual": "aluno_3678638",
+    "status": "confirmada",
+    "prazo": "2026-08-31T00:00:00+00:00",
+    "proxima_da_fila": {
+      "crianca_id": "aluno_0142645",
+      "elegibilidade": "ok",
+      "prioridade_score": 0.0,
+      "resposta_socioeconomica_resumo": {
+        "bairro": "CURICICA"
+      }
+    }
+  },
+  {
+    "vaga_id": "V7042-014",
+    "unidade": "CP INSTITUTO EDUCACIONAL DIVA ALVES II",
+    "crianca_atual": "aluno_6708456",
+    "status": "vencendo",
+    "prazo": "2026-09-06T00:00:00+00:00",
+    "proxima_da_fila": {
+      "crianca_id": "aluno_0021460",
+      "elegibilidade": "ok",
+      "prioridade_score": 59.0,
+      "resposta_socioeconomica_resumo": {
+        "bairro": "CURICICA"
+      }
+    }
+  },
+  {
+    "vaga_id": "V7003-015",
+    "unidade": "CP CRECHE ESCOLA MÃE ASTÉRIA",
+    "crianca_atual": "aluno_3608513",
+    "status": "aguardando_confirmacao",
+    "prazo": "2026-09-04T00:00:00+00:00",
+    "proxima_da_fila": {
+      "crianca_id": "aluno_0007653",
+      "elegibilidade": "ok",
+      "prioridade_score": 55.0,
+      "resposta_socioeconomica_resumo": {
+        "bairro": "TAQUARA"
+      }
+    }
+  },
+  {
+    "vaga_id": "V430603-016",
+    "unidade": "CM TIO MÁRIO",
+    "crianca_atual": "aluno_6647119",
+    "status": "confirmada",
+    "prazo": "2026-09-03T00:00:00+00:00",
+    "proxima_da_fila": {
+      "crianca_id": "aluno_0127905",
+      "elegibilidade": "ok",
+      "prioridade_score": 57.0,
+      "resposta_socioeconomica_resumo": {
+        "bairro": "MARÉ"
+      }
+    }
+  },
+  {
+    "vaga_id": "V716807-017",
+    "unidade": "EDI LEILA DINIZ",
+    "crianca_atual": "aluno_2556017",
+    "status": "vencendo",
+    "prazo": "2026-09-01T00:00:00+00:00",
+    "proxima_da_fila": {
+      "crianca_id": "aluno_0137856",
+      "elegibilidade": "ok",
+      "prioridade_score": 0.0,
+      "resposta_socioeconomica_resumo": {
+        "bairro": "JACAREPAGUÁ"
+      }
+    }
+  },
+  {
+    "vaga_id": "V716605-018",
+    "unidade": "CM SEMPRE VIDA NISE DA SILVEIRA",
+    "crianca_atual": "aluno_2622631",
+    "status": "aguardando_confirmacao",
+    "prazo": "2026-09-06T00:00:00+00:00",
+    "proxima_da_fila": {
+      "crianca_id": "aluno_0146761",
+      "elegibilidade": "ok",
+      "prioridade_score": 0.0,
+      "resposta_socioeconomica_resumo": {
+        "bairro": "CIDADE DE DEUS"
+      }
+    }
+  },
+  {
+    "vaga_id": "V716818-019",
+    "unidade": "EDI PROFESSORA CLÁUDIA PIRES CONTINO DA SILVA",
+    "crianca_atual": "aluno_6770619",
+    "status": "confirmada",
+    "prazo": "2026-09-05T00:00:00+00:00",
+    "proxima_da_fila": {
+      "crianca_id": "aluno_0019520",
+      "elegibilidade": "ok",
+      "prioridade_score": 76.0,
+      "resposta_socioeconomica_resumo": {
+        "bairro": "ANIL"
+      }
+    }
+  }
+]

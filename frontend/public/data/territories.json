@@ -1,0 +1,866 @@
+[
+  {
+    "id": "7.28",
+    "name": "Microárea 7.28 (CRE 7)",
+    "demand": 599,
+    "supply": 441,
+    "pressure": 1.36,
+    "latitude": -23.04527245186232,
+    "longitude": -43.51005584683058
+  },
+  {
+    "id": "1.1",
+    "name": "Microárea 1.1 (CRE 1)",
+    "demand": 664,
+    "supply": 222,
+    "pressure": 2.99,
+    "latitude": -22.87297658325299,
+    "longitude": -43.22100672420978
+  },
+  {
+    "id": "2.1",
+    "name": "Microárea 2.1 (CRE 2)",
+    "demand": 559,
+    "supply": 613,
+    "pressure": 0.91,
+    "latitude": -22.947483523862424,
+    "longitude": -43.16260550484396
+  },
+  {
+    "id": "2.3",
+    "name": "Microárea 2.3 (CRE 2)",
+    "demand": 523,
+    "supply": 519,
+    "pressure": 1.01,
+    "latitude": -22.965961250440248,
+    "longitude": -43.17194188422704
+  },
+  {
+    "id": "10.14",
+    "name": "Microárea 10.14 (CRE 10)",
+    "demand": 148,
+    "supply": 106,
+    "pressure": 1.4,
+    "latitude": -22.91944816479746,
+    "longitude": -43.66249856282868
+  },
+  {
+    "id": "3.23",
+    "name": "Microárea 3.23 (CRE 3)",
+    "demand": 362,
+    "supply": 369,
+    "pressure": 0.98,
+    "latitude": -22.857614652810323,
+    "longitude": -43.27220628024579
+  },
+  {
+    "id": "4.5",
+    "name": "Microárea 4.5 (CRE 4)",
+    "demand": 1093,
+    "supply": 353,
+    "pressure": 3.1,
+    "latitude": -22.870072540895226,
+    "longitude": -43.23652495466759
+  },
+  {
+    "id": "2.5",
+    "name": "Microárea 2.5 (CRE 2)",
+    "demand": 234,
+    "supply": 237,
+    "pressure": 0.99,
+    "latitude": -22.99304544005749,
+    "longitude": -43.230741170491505
+  },
+  {
+    "id": "11.1",
+    "name": "Microárea 11.1 (CRE 11)",
+    "demand": 430,
+    "supply": 56,
+    "pressure": 7.68,
+    "latitude": -22.812792148198504,
+    "longitude": -43.24503756609665
+  },
+  {
+    "id": "7.1",
+    "name": "Microárea 7.1 (CRE 7)",
+    "demand": 633,
+    "supply": 164,
+    "pressure": 3.86,
+    "latitude": -22.888387294680477,
+    "longitude": -43.3695676274152
+  },
+  {
+    "id": "4.16",
+    "name": "Microárea 4.16 (CRE 4)",
+    "demand": 338,
+    "supply": 457,
+    "pressure": 0.74,
+    "latitude": -22.84438330724145,
+    "longitude": -43.28202733564822
+  },
+  {
+    "id": "2.4",
+    "name": "Microárea 2.4 (CRE 2)",
+    "demand": 181,
+    "supply": 230,
+    "pressure": 0.79,
+    "latitude": -22.984933338037855,
+    "longitude": -43.18952089949698
+  },
+  {
+    "id": "2.8",
+    "name": "Microárea 2.8 (CRE 2)",
+    "demand": 206,
+    "supply": 81,
+    "pressure": 2.54,
+    "latitude": -22.987862006166818,
+    "longitude": -43.2451068219981
+  },
+  {
+    "id": "3.3",
+    "name": "Microárea 3.3 (CRE 3)",
+    "demand": 216,
+    "supply": 242,
+    "pressure": 0.89,
+    "latitude": -22.913860920634153,
+    "longitude": -43.269803789967895
+  },
+  {
+    "id": "3.16",
+    "name": "Microárea 3.16 (CRE 3)",
+    "demand": 345,
+    "supply": 163,
+    "pressure": 2.12,
+    "latitude": -22.86678899742183,
+    "longitude": -43.30299228615563
+  },
+  {
+    "id": "5.17",
+    "name": "Microárea 5.17 (CRE 5)",
+    "demand": 244,
+    "supply": 200,
+    "pressure": 1.22,
+    "latitude": -22.87753584657152,
+    "longitude": -43.349583613952056
+  },
+  {
+    "id": "1.5",
+    "name": "Microárea 1.5 (CRE 1)",
+    "demand": 154,
+    "supply": 130,
+    "pressure": 1.18,
+    "latitude": -22.901630407830513,
+    "longitude": -43.2018172239415
+  },
+  {
+    "id": "5.15",
+    "name": "Microárea 5.15 (CRE 5)",
+    "demand": 84,
+    "supply": 57,
+    "pressure": 1.47,
+    "latitude": -22.895309372829324,
+    "longitude": -43.32408759937636
+  },
+  {
+    "id": "3.13",
+    "name": "Microárea 3.13 (CRE 3)",
+    "demand": 366,
+    "supply": 337,
+    "pressure": 1.09,
+    "latitude": -22.88567147325814,
+    "longitude": -43.26492763118671
+  },
+  {
+    "id": "10.13",
+    "name": "Microárea 10.13 (CRE 10)",
+    "demand": 131,
+    "supply": 120,
+    "pressure": 1.09,
+    "latitude": -22.93735259285705,
+    "longitude": -43.682377465549614
+  },
+  {
+    "id": "5.12",
+    "name": "Microárea 5.12 (CRE 5)",
+    "demand": 128,
+    "supply": 100,
+    "pressure": 1.28,
+    "latitude": -22.878944301089913,
+    "longitude": -43.315925769190315
+  },
+  {
+    "id": "5.3",
+    "name": "Microárea 5.3 (CRE 5)",
+    "demand": 262,
+    "supply": 55,
+    "pressure": 4.76,
+    "latitude": -22.832861155276838,
+    "longitude": -43.316787734866914
+  },
+  {
+    "id": "3.14",
+    "name": "Microárea 3.14 (CRE 3)",
+    "demand": 430,
+    "supply": 293,
+    "pressure": 1.47,
+    "latitude": -22.8758190971147,
+    "longitude": -43.26450752915711
+  },
+  {
+    "id": "5.2",
+    "name": "Microárea 5.2 (CRE 5)",
+    "demand": 561,
+    "supply": 916,
+    "pressure": 0.61,
+    "latitude": -22.842173892720687,
+    "longitude": -43.32004388907693
+  },
+  {
+    "id": "10.9",
+    "name": "Microárea 10.9 (CRE 10)",
+    "demand": 946,
+    "supply": 1575,
+    "pressure": 0.6,
+    "latitude": -22.972438924169627,
+    "longitude": -43.71264366821692
+  },
+  {
+    "id": "10.11",
+    "name": "Microárea 10.11 (CRE 10)",
+    "demand": 1060,
+    "supply": 2186,
+    "pressure": 0.48,
+    "latitude": -22.926936671634536,
+    "longitude": -43.688400963539216
+  },
+  {
+    "id": "9.23",
+    "name": "Microárea 9.23 (CRE 9)",
+    "demand": 264,
+    "supply": 50,
+    "pressure": 5.28,
+    "latitude": -22.923894078011198,
+    "longitude": -43.6147333448678
+  },
+  {
+    "id": "5.13",
+    "name": "Microárea 5.13 (CRE 5)",
+    "demand": 59,
+    "supply": 44,
+    "pressure": 1.34,
+    "latitude": -22.86523205883118,
+    "longitude": -43.349147192269704
+  },
+  {
+    "id": "3.4",
+    "name": "Microárea 3.4 (CRE 3)",
+    "demand": 788,
+    "supply": 1404,
+    "pressure": 0.56,
+    "latitude": -22.907279876089678,
+    "longitude": -43.28692827171881
+  },
+  {
+    "id": "1.7",
+    "name": "Microárea 1.7 (CRE 1)",
+    "demand": 272,
+    "supply": 40,
+    "pressure": 6.8,
+    "latitude": -22.90931131338211,
+    "longitude": -43.169308397988544
+  },
+  {
+    "id": "10.27",
+    "name": "Microárea 10.27 (CRE 10)",
+    "demand": 214,
+    "supply": 181,
+    "pressure": 1.18,
+    "latitude": -23.00714845143935,
+    "longitude": -43.62960425550123
+  },
+  {
+    "id": "9.18",
+    "name": "Microárea 9.18 (CRE 9)",
+    "demand": 1142,
+    "supply": 2121,
+    "pressure": 0.54,
+    "latitude": -22.90788380620067,
+    "longitude": -43.54572154390812
+  },
+  {
+    "id": "3.9",
+    "name": "Microárea 3.9 (CRE 3)",
+    "demand": 420,
+    "supply": 256,
+    "pressure": 1.64,
+    "latitude": -22.87734786165132,
+    "longitude": -43.30829787696202
+  },
+  {
+    "id": "3.1",
+    "name": "Microárea 3.1 (CRE 3)",
+    "demand": 711,
+    "supply": 616,
+    "pressure": 1.15,
+    "latitude": -22.89514152284326,
+    "longitude": -43.25053809368489
+  },
+  {
+    "id": "3.8",
+    "name": "Microárea 3.8 (CRE 3)",
+    "demand": 296,
+    "supply": 405,
+    "pressure": 0.73,
+    "latitude": -22.884959453821,
+    "longitude": -43.3030126559376
+  },
+  {
+    "id": "9.8",
+    "name": "Microárea 9.8 (CRE 9)",
+    "demand": 309,
+    "supply": 160,
+    "pressure": 1.93,
+    "latitude": -22.893378846246886,
+    "longitude": -43.553241426910304
+  },
+  {
+    "id": "3.19",
+    "name": "Microárea 3.19 (CRE 3)",
+    "demand": 423,
+    "supply": 659,
+    "pressure": 0.64,
+    "latitude": -22.868412227513005,
+    "longitude": -43.279455436418765
+  },
+  {
+    "id": "10.18",
+    "name": "Microárea 10.18 (CRE 10)",
+    "demand": 1159,
+    "supply": 1480,
+    "pressure": 0.78,
+    "latitude": -22.93103658699314,
+    "longitude": -43.63460847773066
+  },
+  {
+    "id": "3.12",
+    "name": "Microárea 3.12 (CRE 3)",
+    "demand": 259,
+    "supply": 180,
+    "pressure": 1.44,
+    "latitude": -22.88888448942821,
+    "longitude": -43.257001578132225
+  },
+  {
+    "id": "5.14",
+    "name": "Microárea 5.14 (CRE 5)",
+    "demand": 284,
+    "supply": 277,
+    "pressure": 1.03,
+    "latitude": -22.855931646876442,
+    "longitude": -43.365713757054586
+  },
+  {
+    "id": "1.2",
+    "name": "Microárea 1.2 (CRE 1)",
+    "demand": 522,
+    "supply": 444,
+    "pressure": 1.18,
+    "latitude": -22.893311667549174,
+    "longitude": -43.23628903262471
+  },
+  {
+    "id": "10.28",
+    "name": "Microárea 10.28 (CRE 10)",
+    "demand": 592,
+    "supply": 534,
+    "pressure": 1.11,
+    "latitude": -22.954856292584477,
+    "longitude": -43.574815071498506
+  },
+  {
+    "id": "10.1",
+    "name": "Microárea 10.1 (CRE 10)",
+    "demand": 1081,
+    "supply": 1707,
+    "pressure": 0.63,
+    "latitude": -22.864663107610106,
+    "longitude": -43.64569386482205
+  },
+  {
+    "id": "10.12",
+    "name": "Microárea 10.12 (CRE 10)",
+    "demand": 261,
+    "supply": 250,
+    "pressure": 1.04,
+    "latitude": -22.920430442885877,
+    "longitude": -43.67643692234301
+  },
+  {
+    "id": "10.5",
+    "name": "Microárea 10.5 (CRE 10)",
+    "demand": 288,
+    "supply": 250,
+    "pressure": 1.15,
+    "latitude": -22.902286535572976,
+    "longitude": -43.655248311578084
+  },
+  {
+    "id": "3.11",
+    "name": "Microárea 3.11 (CRE 3)",
+    "demand": 126,
+    "supply": 135,
+    "pressure": 0.93,
+    "latitude": -22.897157423436767,
+    "longitude": -43.26830028525182
+  },
+  {
+    "id": "10.15",
+    "name": "Microárea 10.15 (CRE 10)",
+    "demand": 275,
+    "supply": 127,
+    "pressure": 2.17,
+    "latitude": -22.931116644255507,
+    "longitude": -43.66401349591341
+  },
+  {
+    "id": "7.2",
+    "name": "Microárea 7.2 (CRE 7)",
+    "demand": 538,
+    "supply": 453,
+    "pressure": 1.19,
+    "latitude": -22.900455136385748,
+    "longitude": -43.343714449124
+  },
+  {
+    "id": "5.1",
+    "name": "Microárea 5.1 (CRE 5)",
+    "demand": 753,
+    "supply": 715,
+    "pressure": 1.05,
+    "latitude": -22.85609118746974,
+    "longitude": -43.302629656171035
+  },
+  {
+    "id": "2.14",
+    "name": "Microárea 2.14 (CRE 2)",
+    "demand": 186,
+    "supply": 40,
+    "pressure": 4.65,
+    "latitude": -22.931105562723957,
+    "longitude": -43.26605517449137
+  },
+  {
+    "id": "4.23",
+    "name": "Microárea 4.23 (CRE 4)",
+    "demand": 217,
+    "supply": 357,
+    "pressure": 0.61,
+    "latitude": -22.80837855830066,
+    "longitude": -43.28520093950359
+  },
+  {
+    "id": "7.5",
+    "name": "Microárea 7.5 (CRE 7)",
+    "demand": 370,
+    "supply": 455,
+    "pressure": 0.81,
+    "latitude": -22.9174735988691,
+    "longitude": -43.36895198014054
+  },
+  {
+    "id": "8.7",
+    "name": "Microárea 8.7 (CRE 8)",
+    "demand": 318,
+    "supply": 182,
+    "pressure": 1.75,
+    "latitude": -22.89793794771541,
+    "longitude": -43.44888303242602
+  },
+  {
+    "id": "7.18",
+    "name": "Microárea 7.18 (CRE 7)",
+    "demand": 960,
+    "supply": 219,
+    "pressure": 4.38,
+    "latitude": -22.96290684737802,
+    "longitude": -43.32737701924185
+  },
+  {
+    "id": "4.11",
+    "name": "Microárea 4.11 (CRE 4)",
+    "demand": 744,
+    "supply": 1294,
+    "pressure": 0.57,
+    "latitude": -22.84001691837164,
+    "longitude": -43.2504183053869
+  },
+  {
+    "id": "9.13",
+    "name": "Microárea 9.13 (CRE 9)",
+    "demand": 661,
+    "supply": 816,
+    "pressure": 0.81,
+    "latitude": -22.904081403357907,
+    "longitude": -43.61622900179687
+  },
+  {
+    "id": "2.7",
+    "name": "Microárea 2.7 (CRE 2)",
+    "demand": 43,
+    "supply": 71,
+    "pressure": 0.61,
+    "latitude": -22.988361168769046,
+    "longitude": -43.253007621236776
+  },
+  {
+    "id": "4.14",
+    "name": "Microárea 4.14 (CRE 4)",
+    "demand": 229,
+    "supply": 396,
+    "pressure": 0.58,
+    "latitude": -22.8170635724884,
+    "longitude": -43.27477798525722
+  },
+  {
+    "id": "4.4",
+    "name": "Microárea 4.4 (CRE 4)",
+    "demand": 562,
+    "supply": 590,
+    "pressure": 0.95,
+    "latitude": -22.87332808810873,
+    "longitude": -43.24001837683004
+  },
+  {
+    "id": "2.15",
+    "name": "Microárea 2.15 (CRE 2)",
+    "demand": 205,
+    "supply": 421,
+    "pressure": 0.49,
+    "latitude": -22.913856690251194,
+    "longitude": -43.22635161815051
+  },
+  {
+    "id": "2.11",
+    "name": "Microárea 2.11 (CRE 2)",
+    "demand": 252,
+    "supply": 399,
+    "pressure": 0.63,
+    "latitude": -22.950694185950276,
+    "longitude": -43.260098022780255
+  },
+  {
+    "id": "4.21",
+    "name": "Microárea 4.21 (CRE 4)",
+    "demand": 812,
+    "supply": 1386,
+    "pressure": 0.59,
+    "latitude": -22.824214340084104,
+    "longitude": -43.30620056190969
+  },
+  {
+    "id": "7.24",
+    "name": "Microárea 7.24 (CRE 7)",
+    "demand": 275,
+    "supply": 202,
+    "pressure": 1.36,
+    "latitude": -23.006688362080645,
+    "longitude": -43.28843286018506
+  },
+  {
+    "id": "11.2",
+    "name": "Microárea 11.2 (CRE 11)",
+    "demand": 188,
+    "supply": 105,
+    "pressure": 1.79,
+    "latitude": -22.790865005723234,
+    "longitude": -43.21007486119597
+  },
+  {
+    "id": "11.3",
+    "name": "Microárea 11.3 (CRE 11)",
+    "demand": 275,
+    "supply": 279,
+    "pressure": 0.99,
+    "latitude": -22.817336837516297,
+    "longitude": -43.20394257984102
+  },
+  {
+    "id": "4.12",
+    "name": "Microárea 4.12 (CRE 4)",
+    "demand": 198,
+    "supply": 640,
+    "pressure": 0.31,
+    "latitude": -22.85916185716745,
+    "longitude": -43.25256920811553
+  },
+  {
+    "id": "8.5",
+    "name": "Microárea 8.5 (CRE 8)",
+    "demand": 631,
+    "supply": 893,
+    "pressure": 0.71,
+    "latitude": -22.889717070550567,
+    "longitude": -43.43058957918845
+  },
+  {
+    "id": "1.8",
+    "name": "Microárea 1.8 (CRE 1)",
+    "demand": 212,
+    "supply": 30,
+    "pressure": 7.07,
+    "latitude": -22.92090271152218,
+    "longitude": -43.18936888096161
+  },
+  {
+    "id": "2.16",
+    "name": "Microárea 2.16 (CRE 2)",
+    "demand": 38,
+    "supply": 76,
+    "pressure": 0.5,
+    "latitude": -22.927233389761597,
+    "longitude": -43.24733764770185
+  },
+  {
+    "id": "7.14",
+    "name": "Microárea 7.14 (CRE 7)",
+    "demand": 824,
+    "supply": 207,
+    "pressure": 3.98,
+    "latitude": -22.940035840590035,
+    "longitude": -43.35883922365383
+  },
+  {
+    "id": "4.15",
+    "name": "Microárea 4.15 (CRE 4)",
+    "demand": 500,
+    "supply": 827,
+    "pressure": 0.6,
+    "latitude": -22.852263178058024,
+    "longitude": -43.272927701678846
+  },
+  {
+    "id": "8.8",
+    "name": "Microárea 8.8 (CRE 8)",
+    "demand": 767,
+    "supply": 746,
+    "pressure": 1.03,
+    "latitude": -22.885576393686428,
+    "longitude": -43.45669823980965
+  },
+  {
+    "id": "2.6",
+    "name": "Microárea 2.6 (CRE 2)",
+    "demand": 747,
+    "supply": 1332,
+    "pressure": 0.56,
+    "latitude": -22.972938597637274,
+    "longitude": -43.22763519287832
+  },
+  {
+    "id": "11.5",
+    "name": "Microárea 11.5 (CRE 11)",
+    "demand": 551,
+    "supply": 492,
+    "pressure": 1.12,
+    "latitude": -22.783506466780803,
+    "longitude": -43.170447473049066
+  },
+  {
+    "id": "4.19",
+    "name": "Microárea 4.19 (CRE 4)",
+    "demand": 458,
+    "supply": 689,
+    "pressure": 0.66,
+    "latitude": -22.83871799003975,
+    "longitude": -43.2940357903422
+  },
+  {
+    "id": "8.1",
+    "name": "Microárea 8.1 (CRE 8)",
+    "demand": 133,
+    "supply": 50,
+    "pressure": 2.66,
+    "latitude": -22.885886615127454,
+    "longitude": -43.379823971639375
+  },
+  {
+    "id": "2.12",
+    "name": "Microárea 2.12 (CRE 2)",
+    "demand": 168,
+    "supply": 42,
+    "pressure": 4.0,
+    "latitude": -22.93145683945561,
+    "longitude": -43.223848777425886
+  },
+  {
+    "id": "2.2",
+    "name": "Microárea 2.2 (CRE 2)",
+    "demand": 354,
+    "supply": 187,
+    "pressure": 1.89,
+    "latitude": -22.923976481103086,
+    "longitude": -43.17769746357382
+  },
+  {
+    "id": "7.8",
+    "name": "Microárea 7.8 (CRE 7)",
+    "demand": 1164,
+    "supply": 598,
+    "pressure": 1.95,
+    "latitude": -22.928412501878878,
+    "longitude": -43.42705987181222
+  },
+  {
+    "id": "9.14",
+    "name": "Microárea 9.14 (CRE 9)",
+    "demand": 439,
+    "supply": 588,
+    "pressure": 0.75,
+    "latitude": -22.90995485718805,
+    "longitude": -43.591873154066526
+  },
+  {
+    "id": "4.1",
+    "name": "Microárea 4.1 (CRE 4)",
+    "demand": 338,
+    "supply": 357,
+    "pressure": 0.95,
+    "latitude": -22.879766033705945,
+    "longitude": -43.25319716667775
+  },
+  {
+    "id": "9.7",
+    "name": "Microárea 9.7 (CRE 9)",
+    "demand": 650,
+    "supply": 342,
+    "pressure": 1.9,
+    "latitude": -22.87813207129475,
+    "longitude": -43.52609308527493
+  },
+  {
+    "id": "7.25",
+    "name": "Microárea 7.25 (CRE 7)",
+    "demand": 452,
+    "supply": 557,
+    "pressure": 0.81,
+    "latitude": -22.973652832486295,
+    "longitude": -43.4913281324317
+  },
+  {
+    "id": "6.18",
+    "name": "Microárea 6.18 (CRE 6)",
+    "demand": 288,
+    "supply": 103,
+    "pressure": 2.8,
+    "latitude": -22.824951340808138,
+    "longitude": -43.41218494415775
+  },
+  {
+    "id": "7.16",
+    "name": "Microárea 7.16 (CRE 7)",
+    "demand": 769,
+    "supply": 301,
+    "pressure": 2.55,
+    "latitude": -22.950723515101064,
+    "longitude": -43.349877470058715
+  },
+  {
+    "id": "6.12",
+    "name": "Microárea 6.12 (CRE 6)",
+    "demand": 463,
+    "supply": 597,
+    "pressure": 0.78,
+    "latitude": -22.81875291120947,
+    "longitude": -43.397627216426564
+  },
+  {
+    "id": "6.2",
+    "name": "Microárea 6.2 (CRE 6)",
+    "demand": 185,
+    "supply": 210,
+    "pressure": 0.88,
+    "latitude": -22.817238814197534,
+    "longitude": -43.34454233496746
+  },
+  {
+    "id": "6.17",
+    "name": "Microárea 6.17 (CRE 6)",
+    "demand": 149,
+    "supply": 184,
+    "pressure": 0.81,
+    "latitude": -22.837778026352787,
+    "longitude": -43.4022962688024
+  },
+  {
+    "id": "6.1",
+    "name": "Microárea 6.1 (CRE 6)",
+    "demand": 408,
+    "supply": 170,
+    "pressure": 2.4,
+    "latitude": -22.80512139253035,
+    "longitude": -43.35737178568053
+  },
+  {
+    "id": "7.22",
+    "name": "Microárea 7.22 (CRE 7)",
+    "demand": 1834,
+    "supply": 283,
+    "pressure": 6.48,
+    "latitude": -22.973618604299652,
+    "longitude": -43.330753857307876
+  },
+  {
+    "id": "6.6",
+    "name": "Microárea 6.6 (CRE 6)",
+    "demand": 542,
+    "supply": 410,
+    "pressure": 1.32,
+    "latitude": -22.821825242553725,
+    "longitude": -43.358285016400544
+  },
+  {
+    "id": "6.15",
+    "name": "Microárea 6.15 (CRE 6)",
+    "demand": 226,
+    "supply": 134,
+    "pressure": 1.69,
+    "latitude": -22.844419837856115,
+    "longitude": -43.38511665091652
+  },
+  {
+    "id": "7.17",
+    "name": "Microárea 7.17 (CRE 7)",
+    "demand": 274,
+    "supply": 80,
+    "pressure": 3.42,
+    "latitude": -22.96127064761298,
+    "longitude": -43.3523523630318
+  },
+  {
+    "id": "7.11",
+    "name": "Microárea 7.11 (CRE 7)",
+    "demand": 836,
+    "supply": 76,
+    "pressure": 11.0,
+    "latitude": -22.948964986878376,
+    "longitude": -43.38025702064825
+  },
+  {
+    "id": "6.4",
+    "name": "Microárea 6.4 (CRE 6)",
+    "demand": 125,
+    "supply": 84,
+    "pressure": 1.49,
+    "latitude": -22.811968291019454,
+    "longitude": -43.37968567628956
+  },
+  {
+    "id": "7.7",
+    "name": "Microárea 7.7 (CRE 7)",
+    "demand": 604,
+    "supply": 721,
+    "pressure": 0.84,
+    "latitude": -22.93307809064695,
+    "longitude": -43.31161049675459
+  }
+]
