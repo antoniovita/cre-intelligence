@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Frontend — CRE Intelligence
 
-## Getting Started
+Next.js 16 (App Router) + React 19 + Tailwind 4. Lê apenas JSONs estáticos de `public/data/`, gerados offline pelo pipeline Python — não há chamadas a backend.
 
-First, run the development server:
+Visão geral do projeto, arquitetura e contrato de dados: [`../README.md`](../README.md).
+
+## Rodar
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+| Comando | O que faz |
+|---|---|
+| `npm run dev` | Servidor de desenvolvimento |
+| `npm run build` | Build de produção |
+| `npm run start` | Serve o build |
+| `npm run lint` | ESLint |
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Estrutura
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+app/                    # rotas (App Router)
+├── page.tsx            # landing
+├── login/              # login unificado (gestor | família)
+├── admin/              # área da gestão: mapa de pressão + fila
+└── consulta/           # área da família: consultar vaga + inscrever
 
-## Learn More
+components/
+├── territory-ops/      # tela operacional de pressão por território (/admin)
+├── vacancy/            # fila de vagas e cards de vaga
+├── family/             # consulta, inscrição e mapa da família
+├── nav/                # sidebars, brand, container de página
+└── ui/                 # componentes genéricos (StatTile, PaginationControls)
 
-To learn more about Next.js, take a look at the following resources:
+lib/                    # hooks e lógica pura (cálculo de pressure, geo, paginação)
+public/data/            # territories.json e queue.json — gerados pelo pipeline
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Dados
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Os JSONs em `public/data/` são o contrato com o pipeline; os tipos estão em [`lib/types.ts`](lib/types.ts). Para regenerá-los, rode `python -m pipeline.build` na raiz do repo.
 
-## Deploy on Vercel
+## Autenticação
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Mockada — não há backend validando credenciais. `/consulta` exige sessão de família (`RequireFamilySession`, via `sessionStorage`); confirmar/recusar vaga exige estar logado. Os pontos de integração real estão marcados com `TODO(backend)`.

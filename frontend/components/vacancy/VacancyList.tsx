@@ -2,9 +2,10 @@
 
 import { useMemo, useState } from "react";
 import { useJsonData } from "@/lib/useJsonData";
+import { usePagination } from "@/lib/usePagination";
 import type { VacancyQueueItem, VacancyStatus } from "@/lib/types";
 import { VacancyCard } from "./VacancyCard";
-import { PaginationControls } from "../dashboard/PaginationControls";
+import { PaginationControls } from "../ui/PaginationControls";
 
 interface VacancyListProps {
   /** Optional territory/unidade filter, e.g. selecionado no mapa */
@@ -41,7 +42,6 @@ export function VacancyList({ unidadeFilter, layout = "grid", showControls = fal
   );
   const [statusFilter, setStatusFilter] = useState<VacancyStatus | "todas">("todas");
   const [query, setQuery] = useState("");
-  const [page, setPage] = useState(1);
 
   const gridClass =
     layout === "single"
@@ -67,20 +67,13 @@ export function VacancyList({ unidadeFilter, layout = "grid", showControls = fal
       });
   }, [data, unidadeFilter, statusFilter, query]);
 
-  const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
-  const clampedPage = Math.min(page, totalPages);
-  const paged = showControls
-    ? filtered.slice((clampedPage - 1) * PAGE_SIZE, clampedPage * PAGE_SIZE)
-    : filtered;
-
-  function handleStatusFilter(value: VacancyStatus | "todas") {
-    setStatusFilter(value);
-    setPage(1);
-  }
-  function handleQueryChange(value: string) {
-    setQuery(value);
-    setPage(1);
-  }
+  // usePagination reseta para a página 1 sozinho quando `filtered` muda de
+  // identidade (novo filtro/busca), então os handlers abaixo só setam o filtro.
+  const { page, totalPages, pageItems, setPage } = usePagination(
+    filtered,
+    PAGE_SIZE
+  );
+  const paged = showControls ? pageItems : filtered;
 
   if (loading) {
     return (
@@ -112,7 +105,7 @@ export function VacancyList({ unidadeFilter, layout = "grid", showControls = fal
             {STATUS_FILTERS.map((f) => (
               <button
                 key={f.value}
-                onClick={() => handleStatusFilter(f.value)}
+                onClick={() => setStatusFilter(f.value)}
                 className={`rounded-full border px-3 py-1.5 text-xs font-medium transition-colors ${
                   statusFilter === f.value
                     ? "border-blue-700 bg-blue-600 text-white"
@@ -132,7 +125,7 @@ export function VacancyList({ unidadeFilter, layout = "grid", showControls = fal
             <input
               type="text"
               value={query}
-              onChange={(e) => handleQueryChange(e.target.value)}
+              onChange={(e) => setQuery(e.target.value)}
               placeholder="Buscar unidade, criança ou vaga"
               className="w-full border-none bg-transparent text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none"
             />
@@ -153,7 +146,7 @@ export function VacancyList({ unidadeFilter, layout = "grid", showControls = fal
       )}
 
       {showControls && (
-        <PaginationControls page={clampedPage} totalPages={totalPages} onPageChange={setPage} />
+        <PaginationControls page={page} totalPages={totalPages} onPageChange={setPage} />
       )}
     </div>
   );

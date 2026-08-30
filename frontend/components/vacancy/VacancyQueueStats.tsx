@@ -1,5 +1,5 @@
 import type { VacancyQueueItem } from "@/lib/types";
-import { StatTile } from "../dashboard/StatTile";
+import { StatTile } from "../ui/StatTile";
 
 interface VacancyQueueStatsProps {
   items: VacancyQueueItem[];
