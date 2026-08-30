@@ -44,6 +44,21 @@ def _priority_scores(ano: int) -> pd.DataFrame:
     )
 
 
+def _format_endereco(row) -> str | None:
+    """'RUA X, 123 — BAIRRO' a partir das colunas da Query D; None se faltar tudo."""
+    if row is None:
+        return None
+    partes = []
+    if pd.notna(row["logradouro"]):
+        logradouro = str(row["logradouro"]).strip()
+        if pd.notna(row["numero"]):
+            logradouro += f", {str(row['numero']).strip()}"
+        partes.append(logradouro)
+    if pd.notna(row["bairro"]):
+        partes.append(str(row["bairro"]).strip())
+    return " — ".join(partes) if partes else None
+
+
 def build_queue() -> list[dict]:
     """
     Gera a lista de vagas no schema de queue.json:
@@ -59,6 +74,17 @@ def build_queue() -> list[dict]:
 
     query_a = loaders.load_query_a()
     scores = _priority_scores(QUEUE_ANO)
+
+    # Localização e endereço da unidade ofertada: a família precisa saber ONDE
+    # fica a creche antes de confirmar/recusar. Mesmo join usado em
+    # territories.py (unidade == esc_codigo == DESIGNACAO, todos numéricos).
+    localizacao = loaders.load_unidades_localizacao().assign(
+        DESIGNACAO=lambda d: d["DESIGNACAO"].astype(int)
+    )
+    coords = localizacao.set_index("DESIGNACAO")[["LATITUDE", "LONGITUDE"]]
+    endereco = loaders.load_query_d().assign(
+        esc_codigo=lambda d: d["esc_codigo"].astype(int)
+    ).set_index("esc_codigo")[["logradouro", "numero", "bairro"]]
 
     fila = query_a[
         (query_a["ano"] == QUEUE_ANO) & (query_a["situacao"] == "Lista de espera")
@@ -94,10 +120,17 @@ def build_queue() -> list[dict]:
         status = statuses[i % len(statuses)]
         prazo = now + timedelta(days=rng.randint(1, 10))
 
+        cod = int(unidade)
+        lat_lon = coords.loc[cod] if cod in coords.index else None
+        end = endereco.loc[cod] if cod in endereco.index else None
+
         queue_items.append(
             {
-                "vaga_id": f"V{int(unidade)}-{i:03d}",
+                "vaga_id": f"V{cod}-{i:03d}",
                 "unidade": str(proxima["nome_unidade"]).strip(),
+                "unidade_latitude": float(lat_lon["LATITUDE"]) if lat_lon is not None else None,
+                "unidade_longitude": float(lat_lon["LONGITUDE"]) if lat_lon is not None else None,
+                "unidade_endereco": _format_endereco(end),
                 "crianca_atual": f"aluno_{rng.randint(1000000, 9999999)}",
                 "status": status,
                 "prazo": prazo.isoformat(),
