@@ -1,0 +1,128 @@
+[
+  {
+    "id": "10.7",
+    "name": "Santa Cruz",
+    "demand": 1840,
+    "supply": 620,
+    "pressure": 2.97,
+    "latitude": -22.9186,
+    "longitude": -43.6847
+  },
+  {
+    "id": "3.14",
+    "name": "Complexo do Alemão",
+    "demand": 1310,
+    "supply": 430,
+    "pressure": 3.05,
+    "latitude": -22.862,
+    "longitude": -43.268
+  },
+  {
+    "id": "2.15",
+    "name": "Rocinha",
+    "demand": 880,
+    "supply": 305,
+    "pressure": 2.89,
+    "latitude": -22.988,
+    "longitude": -43.247
+  },
+  {
+    "id": "9.3",
+    "name": "Campo Grande",
+    "demand": 2140,
+    "supply": 1180,
+    "pressure": 1.81,
+    "latitude": -22.9035,
+    "longitude": -43.561
+  },
+  {
+    "id": "3.21",
+    "name": "Maré",
+    "demand": 1495,
+    "supply": 860,
+    "pressure": 1.74,
+    "latitude": -22.856,
+    "longitude": -43.244
+  },
+  {
+    "id": "8.5",
+    "name": "Bangu",
+    "demand": 1620,
+    "supply": 980,
+    "pressure": 1.65,
+    "latitude": -22.8792,
+    "longitude": -43.4653
+  },
+  {
+    "id": "7.19",
+    "name": "Cidade de Deus",
+    "demand": 690,
+    "supply": 430,
+    "pressure": 1.6,
+    "latitude": -22.946,
+    "longitude": -43.362
+  },
+  {
+    "id": "8.12",
+    "name": "Realengo",
+    "demand": 1080,
+    "supply": 745,
+    "pressure": 1.45,
+    "latitude": -22.8817,
+    "longitude": -43.4256
+  },
+  {
+    "id": "3.6",
+    "name": "Penha",
+    "demand": 1150,
+    "supply": 905,
+    "pressure": 1.27,
+    "latitude": -22.842,
+    "longitude": -43.279
+  },
+  {
+    "id": "7.11",
+    "name": "Jacarepaguá",
+    "demand": 1130,
+    "supply": 1240,
+    "pressure": 0.91,
+    "latitude": -22.952,
+    "longitude": -43.372
+  },
+  {
+    "id": "5.4",
+    "name": "Madureira",
+    "demand": 820,
+    "supply": 930,
+    "pressure": 0.88,
+    "latitude": -22.8721,
+    "longitude": -43.339
+  },
+  {
+    "id": "6.8",
+    "name": "Méier",
+    "demand": 640,
+    "supply": 810,
+    "pressure": 0.79,
+    "latitude": -22.902,
+    "longitude": -43.279
+  },
+  {
+    "id": "2.9",
+    "name": "Tijuca",
+    "demand": 570,
+    "supply": 760,
+    "pressure": 0.75,
+    "latitude": -22.9247,
+    "longitude": -43.232
+  },
+  {
+    "id": "11.2",
+    "name": "Ilha do Governador",
+    "demand": 480,
+    "supply": 690,
+    "pressure": 0.7,
+    "latitude": -22.81,
+    "longitude": -43.202
+  }
+]
