@@ -1,7 +1,3 @@
-// Contrato compartilhado entre pipeline (Python) e frontend.
-// Espelha exatamente o schema de territories.json e queue.json — se um lado
-// mudar um nome de campo, mudar aqui também e avisar o time.
-
 export interface Territory {
   id: string;
   name: string;

@@ -1,13 +1,5 @@
 "use client";
 
-// Hook compartilhado pra ler os JSONs estáticos gerados pelo pipeline
-// (frontend/public/data/*.json). Usado tanto pelo mapa (territories.json)
-// quanto pelo painel de fila (queue.json) — mesmo padrão de loading/erro
-// pros dois, sem duplicar fetch boilerplate.
-//
-// Uso:
-//   const { data: territories, loading, error } = useJsonData<Territory[]>("/data/territories.json");
-
 import { useEffect, useState } from "react";
 
 interface UseJsonDataResult<T> {
