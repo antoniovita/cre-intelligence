@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Brand } from "./Brand";
 
 interface SidebarItem {
   href: string;
@@ -97,20 +98,15 @@ export function AdminSidebar() {
 
   return (
     <aside className="flex w-16 shrink-0 flex-col border-r border-slate-200 bg-white py-4 lg:w-60">
-      <div className="mb-2 flex flex-col gap-0.5 px-4">
-        <div className="flex items-center justify-center gap-2 lg:justify-start">
-          <svg width="18" height="18" viewBox="0 0 32 32" aria-hidden="true" className="shrink-0">
-            <circle cx="16" cy="16" r="15" fill="#dbeafe" />
-            <circle cx="16" cy="16" r="6.5" fill="#2563eb" />
-            <circle cx="16" cy="16" r="2.4" fill="#ffffff" />
-          </svg>
-          <span className="hidden text-[19px] font-semibold tracking-tight text-slate-900 lg:inline">
-            CRE Intelligence
-          </span>
-        </div>
-        <span className="hidden pl-6 text-[10px] uppercase tracking-wide text-slate-400 lg:inline">
-          SME · Rio de Janeiro
-        </span>
+      <div className="mb-2 hidden flex-col gap-0.5 px-4 lg:flex">
+        <Brand />
+      </div>
+      <div className="mb-2 flex justify-center px-4 lg:hidden">
+        <svg width="18" height="18" viewBox="0 0 32 32" aria-hidden="true" className="shrink-0">
+          <circle cx="16" cy="16" r="15" fill="#dbeafe" />
+          <circle cx="16" cy="16" r="6.5" fill="#2563eb" />
+          <circle cx="16" cy="16" r="2.4" fill="#ffffff" />
+        </svg>
       </div>
 
       <span className="hidden px-4 py-2 text-[9.5px] uppercase tracking-wide text-slate-400 lg:block">

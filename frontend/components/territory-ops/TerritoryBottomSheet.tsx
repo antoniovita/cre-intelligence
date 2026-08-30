@@ -3,28 +3,33 @@
 import type { Territory } from "@/lib/types";
 import { pressureColor } from "@/lib/pressureColor";
 import { pressureBand } from "@/lib/pressureBand";
+import type { SimulatedUnit } from "./TerritoryOperationsScreen";
 
 const ADD_OPTIONS = [10, 25, 50, 100];
 const GAUGE_MAX = 6;
 const fmt = (n: number) => n.toLocaleString("pt-BR");
 
 interface TerritoryBottomSheetProps {
+  /** The territory as it actually is, with no simulated supply applied. */
   base: Territory;
+  /** The territory with every simulated unit near it folded into supply/pressure. */
   displayed: Territory;
-  addedSupply: number;
-  onAdd: (amount: number) => void;
-  onReset: () => void;
+  /** The specific simulated unit selected on the map, if any — lets the sheet target its own +N/remove controls at just this pin. */
+  unit: SimulatedUnit | null;
+  onAddToUnit: (amount: number) => void;
+  onRemoveUnit: () => void;
   onClose: () => void;
 }
 
 export function TerritoryBottomSheet({
   base,
   displayed,
-  addedSupply,
-  onAdd,
-  onReset,
+  unit,
+  onAddToUnit,
+  onRemoveUnit,
   onClose,
 }: TerritoryBottomSheetProps) {
+  const addedSupply = displayed.supply - base.supply;
   const changed = addedSupply > 0;
   const band = pressureBand(displayed.pressure);
   const baseBand = pressureBand(base.pressure);
@@ -98,7 +103,7 @@ export function TerritoryBottomSheet({
           </div>
           <p className="mt-2 min-h-4 text-xs italic text-blue-700">
             {changed
-              ? `−${dropPct.toFixed(0)}% de pressão com +${addedSupply} vagas · faixa ${baseBand.label.toLowerCase()} → ${band.label.toLowerCase()}`
+              ? `−${dropPct.toFixed(0)}% de pressão com +${addedSupply} vagas simuladas · faixa ${baseBand.label.toLowerCase()} → ${band.label.toLowerCase()}`
               : "Pressão atual, sem vagas simuladas."}
           </p>
 
@@ -185,33 +190,50 @@ export function TerritoryBottomSheet({
 
         {/* Célula 3: simulador */}
         <div className="p-4">
-          <p className="mb-2 text-[9.5px] uppercase tracking-wide text-slate-400">
-            Simular novas vagas
-          </p>
-          <div className="grid grid-cols-4 gap-2">
-            {ADD_OPTIONS.map((amount) => (
-              <button
-                key={amount}
-                onClick={() => onAdd(amount)}
-                className="rounded-md border border-slate-200 py-2.5 text-[15px] font-semibold text-slate-900 transition-colors hover:border-blue-300 hover:bg-blue-50 hover:text-blue-900 active:bg-blue-100"
-              >
-                +{amount}
-              </button>
-            ))}
-          </div>
-          <div className="mt-3 flex items-center gap-2">
-            <span className="text-xs tabular-nums text-blue-700">
-              {changed ? `+${addedSupply} vagas simuladas` : "Nenhuma vaga simulada"}
-            </span>
-            {changed && (
-              <button
-                onClick={onReset}
-                className="ml-auto rounded-md border border-slate-200 px-3 py-1.5 text-xs text-slate-500 hover:bg-slate-50 hover:text-slate-900"
-              >
-                Resetar
-              </button>
-            )}
-          </div>
+          {unit ? (
+            <>
+              <p className="mb-2 text-[9.5px] uppercase tracking-wide text-slate-400">
+                Capacidade desta unidade
+              </p>
+              <p className="mb-2 text-[11.5px] leading-relaxed text-blue-700">
+                Unidade fictícia posicionada no mapa — vagas somadas à oferta do território mais
+                próximo do ponto clicado ({base.name}).
+              </p>
+              <div className="grid grid-cols-4 gap-2">
+                {ADD_OPTIONS.map((amount) => (
+                  <button
+                    key={amount}
+                    onClick={() => onAddToUnit(amount)}
+                    className="rounded-md border border-slate-200 py-2.5 text-[15px] font-semibold text-slate-900 transition-colors hover:border-blue-300 hover:bg-blue-50 hover:text-blue-900 active:bg-blue-100"
+                  >
+                    +{amount}
+                  </button>
+                ))}
+              </div>
+              <div className="mt-3 flex items-center gap-2">
+                <span className="text-xs tabular-nums text-blue-700">
+                  {unit.supply > 0 ? `${unit.supply} vagas nesta unidade` : "Nenhuma vaga ainda"}
+                </span>
+                <button
+                  onClick={onRemoveUnit}
+                  className="ml-auto rounded-md border border-slate-200 px-3 py-1.5 text-xs text-slate-500 hover:bg-red-50 hover:text-red-700"
+                >
+                  Remover unidade
+                </button>
+              </div>
+            </>
+          ) : (
+            <>
+              <p className="mb-2 text-[9.5px] uppercase tracking-wide text-slate-400">
+                Simular novas vagas
+              </p>
+              <p className="text-[11.5px] leading-relaxed text-slate-500">
+                {changed
+                  ? "Este território já tem unidade(s) simulada(s). Clique no pin azul no mapa para ajustar as vagas ou remover."
+                  : 'Use "Simular nova creche" e clique num ponto do mapa perto deste território para começar.'}
+              </p>
+            </>
+          )}
           <p className="mt-3 text-[11.5px] leading-relaxed text-slate-400">
             Cenário local, não altera os dados da fila. A cor do ponto no mapa acompanha a
             simulação.

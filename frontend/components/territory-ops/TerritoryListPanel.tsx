@@ -33,7 +33,7 @@ export function TerritoryListPanel({
   }, [territories, query, displayedPressureFor]);
 
   return (
-    <section className="flex w-full shrink-0 flex-col border-r border-slate-200 bg-white sm:w-77">
+    <section className="flex h-full min-h-0 w-full shrink-0 flex-col border-r border-slate-200 bg-white sm:w-77">
       <div className="flex flex-col gap-3 p-4 pb-3">
         <div className="flex w-fit rounded-md bg-slate-100 p-0.5 text-sm">
           <span className="rounded-md bg-white px-2.5 py-1 font-semibold text-blue-900 shadow-sm">

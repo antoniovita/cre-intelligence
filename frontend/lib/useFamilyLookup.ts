@@ -7,6 +7,7 @@ import type { VacancyQueueItem } from "./types";
 export interface FamilyOffer {
   vaga_id: string;
   unidade: string;
+  bairro: string | null;
   status: VacancyQueueItem["status"];
   prazo: string;
   crianca_id: string;
@@ -43,11 +44,14 @@ export function useFamilyLookup(criancaId: string | null): FamilyLookupResult {
 
     if (!match) return { state: "not-found" };
 
+    const bairro = match.proxima_da_fila.resposta_socioeconomica_resumo?.bairro;
+
     return {
       state: "found",
       offer: {
         vaga_id: match.vaga_id,
         unidade: match.unidade,
+        bairro: typeof bairro === "string" ? bairro : null,
         status: match.status,
         prazo: match.prazo,
         crianca_id: match.proxima_da_fila.crianca_id,

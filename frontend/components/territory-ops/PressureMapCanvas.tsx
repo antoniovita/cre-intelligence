@@ -5,6 +5,7 @@ import * as maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import type { Territory } from "@/lib/types";
 import { pressureColor } from "@/lib/pressureColor";
+import type { SimulatedUnit } from "./TerritoryOperationsScreen";
 
 const RIO_CENTER: [number, number] = [-43.44, -22.91];
 
@@ -15,6 +16,13 @@ interface PressureMapCanvasProps {
   displayedPressure: number | null;
   worstId: string | null;
   onSelect: (id: string) => void;
+  /** When true, the map is in "place a new unit" mode: cursor changes and clicks report lat/lon instead of selecting a territory. */
+  placingMode?: boolean;
+  onPlaceUnit?: (lat: number, lon: number) => void;
+  /** All simulated new units currently placed on the map. */
+  units?: SimulatedUnit[];
+  selectedUnitId?: string | null;
+  onSelectUnit?: (id: string) => void;
 }
 
 interface MarkerRefs {
@@ -23,17 +31,28 @@ interface MarkerRefs {
   tip: HTMLSpanElement;
 }
 
+interface UnitMarkerRefs {
+  marker: maplibregl.Marker;
+  el: HTMLButtonElement;
+}
+
 export function PressureMapCanvas({
   territories,
   selectedId,
   displayedPressure,
   worstId,
   onSelect,
+  placingMode = false,
+  onPlaceUnit,
+  units = [],
+  selectedUnitId = null,
+  onSelectUnit,
 }: PressureMapCanvasProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
   const markersRef = useRef<Map<string, MarkerRefs>>(new Map());
   const prevSelectedRef = useRef<string | null>(null);
+  const unitMarkersRef = useRef<Map<string, UnitMarkerRefs>>(new Map());
 
   // Init map once.
   useEffect(() => {
@@ -64,19 +83,50 @@ export function PressureMapCanvas({
     // rechecks it on its own — if the flex layout around it settles to its
     // final size a frame later (or the sidebar/panel widths change), the
     // canvas is left stuck at whatever size it saw first, so only the
-    // portion of the map it thought it had gets tiles. Force a resize once
-    // the map has fully loaded (layout has settled by then) and again on
-    // every subsequent container resize.
+    // portion of the map it thought it had gets tiles. A ResizeObserver only
+    // fires on a subsequent size *change*, so it does nothing if the
+    // container was already wrong at construction time and never resizes
+    // again afterwards — force a resize a couple of times right after
+    // construction (rAF, so it runs after the browser's own layout pass) and
+    // once more on "load", then let the observer take over for later changes.
+    let rafId = requestAnimationFrame(() => {
+      map.resize();
+      rafId = requestAnimationFrame(() => map.resize());
+    });
     map.once("load", () => map.resize());
     const resizeObserver = new ResizeObserver(() => map.resize());
     resizeObserver.observe(containerRef.current);
 
     return () => {
+      cancelAnimationFrame(rafId);
       resizeObserver.disconnect();
       map.remove();
       mapRef.current = null;
     };
   }, []);
+
+  // Placing-mode click handler + cursor. Kept in its own effect so it can
+  // rebind onPlaceUnit without re-initializing the map.
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map) return;
+
+    const canvas = map.getCanvas();
+    canvas.style.cursor = placingMode ? "crosshair" : "";
+    // Toggling the overlay button's label can nudge layout right after the
+    // map settles; re-check the container size defensively.
+    map.resize();
+
+    if (!placingMode || !onPlaceUnit) return;
+
+    const handleClick = (e: maplibregl.MapMouseEvent) => {
+      onPlaceUnit(e.lngLat.lat, e.lngLat.lng);
+    };
+    map.on("click", handleClick);
+    return () => {
+      map.off("click", handleClick);
+    };
+  }, [placingMode, onPlaceUnit]);
 
   // Create markers when territory data arrives.
   useEffect(() => {
@@ -90,7 +140,16 @@ export function PressureMapCanvas({
       const el = document.createElement("button");
       el.type = "button";
       el.title = t.name;
-      el.style.position = "relative";
+      // No inline `position` here: MapLibre appends this element straight
+      // into the canvas container and positions it by writing an inline
+      // `transform` (see marker.ts _update), relying on its own
+      // `.maplibregl-marker { position: absolute }` class rule to take it out
+      // of flow first. An inline `position: relative` would win the cascade
+      // over that class (inline always beats a class, same trick as the map
+      // container fix below) and leave the button in normal document flow,
+      // so every marker's translate offset stacks on top of wherever the
+      // browser laid it out in the DOM instead of the map's (0,0) — which is
+      // exactly the "points scattered off their real spot" bug.
       el.style.border = "none";
       el.style.background = "none";
       el.style.padding = "0";
@@ -198,6 +257,63 @@ export function PressureMapCanvas({
     }
     prevSelectedRef.current = selectedId;
   }, [territories, selectedId, displayedPressure, worstId]);
+
+  // Markers for simulated new units (distinct from real territory markers).
+  // Diffed by id against the current `units` prop so clicking one pin doesn't
+  // recreate every other pin (which would drop hover/focus state and briefly
+  // flash).
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map) return;
+
+    const seen = new Set(units.map((u) => u.id));
+    unitMarkersRef.current.forEach((refs, id) => {
+      if (!seen.has(id)) {
+        refs.marker.remove();
+        unitMarkersRef.current.delete(id);
+      }
+    });
+
+    units.forEach((u) => {
+      let refs = unitMarkersRef.current.get(u.id);
+      if (!refs) {
+        const el = document.createElement("button");
+        el.type = "button";
+        el.style.border = "none";
+        el.style.padding = "0";
+        el.style.cursor = "pointer";
+        el.style.borderRadius = "50%";
+        el.style.color = "#fff";
+        el.style.display = "grid";
+        el.style.placeItems = "center";
+        el.style.fontSize = "14px";
+        el.style.fontWeight = "700";
+        el.style.lineHeight = "1";
+        el.style.transition = "width .15s ease, height .15s ease";
+        el.textContent = "+";
+        el.addEventListener("click", (e) => {
+          e.stopPropagation();
+          onSelectUnit?.(u.id);
+        });
+
+        const marker = new maplibregl.Marker({ element: el }).setLngLat([u.longitude, u.latitude]).addTo(map);
+        refs = { marker, el };
+        unitMarkersRef.current.set(u.id, refs);
+      } else {
+        refs.marker.setLngLat([u.longitude, u.latitude]);
+      }
+
+      const isSelected = u.id === selectedUnitId;
+      refs.el.style.width = isSelected ? "26px" : "22px";
+      refs.el.style.height = isSelected ? "26px" : "22px";
+      refs.el.style.background = "#2563eb";
+      refs.el.style.border = isSelected ? "3px solid #fff" : "2.5px solid #fff";
+      refs.el.style.boxShadow = isSelected
+        ? "0 0 0 5px rgba(37,99,235,.25), 0 2px 8px rgba(0,0,0,.35)"
+        : "0 2px 8px rgba(0,0,0,.35)";
+      refs.el.style.zIndex = isSelected ? "5" : "3";
+    });
+  }, [units, selectedUnitId, onSelectUnit]);
 
   return (
     <>
