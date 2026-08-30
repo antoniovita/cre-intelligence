@@ -186,7 +186,6 @@ Também trabalha contra mock desde o minuto 0. Dona do layout geral e do roteiro
 ## Fora do escopo (não fazer, nem "só um pouquinho")
 
 - ML complexo / modelo de classificação
-- Login, autenticação, permissões de usuário
 - CRUD completo
 - Envio real de WhatsApp/SMS
 - Backend elaborado, microsserviços, Kubernetes, servidor rodando durante a apresentação
@@ -194,6 +193,12 @@ Também trabalha contra mock desde o minuto 0. Dona do layout geral e do roteiro
 - GIS sofisticado (buffers, isócronas, roteamento) — a agregação por microárea via shapefile oficial + coordenadas reais das unidades já é o dado pronto, não precisa de mais processamento geoespacial que isso
 - Timeline evento-a-evento no Vacancy Flow
 - Cascata de fila em N níveis — só pré-computar 1 próximo por vaga
+
+> **Atualização (pós-MVP, com tempo sobrando):** o time decidiu incluir login/autenticação de admin
+> e persistência de lembretes via um backend leve dentro do próprio Next.js (Route Handlers +
+> Prisma + Neon/Postgres serverless) — não um serviço separado, sem infra nova pra administrar.
+> Os dados reais (`territories.json`/`queue.json`) continuam estáticos; o banco entra só para as
+> interações que precisam de estado mutável (lembretes, sessão de usuário).
 
 ---
 
