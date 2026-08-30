@@ -35,6 +35,7 @@ export function MapPanel({ className = "" }: MapPanelProps) {
       <TerritoryMap onSelectTerritory={handleSelect} overrideTerritory={displayed} />
       <TerritoryDetail
         territory={displayed}
+        originalTerritory={selected}
         onClose={() => {
           setSelected(null);
           setAddedSupply(0);
